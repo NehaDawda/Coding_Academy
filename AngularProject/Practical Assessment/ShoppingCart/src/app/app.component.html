@@ -1,0 +1,51 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<!DOCTYPE html>
+<html>
+
+<body>
+  <div>
+    <table>
+      <tbody>
+        <tr>
+          <td class="col-md-2">
+            <a>Shopping Cart</a>
+          </td>
+          <td class="col-md-14">
+            <ul class="nav nav-tabs">
+              <li routerLinkActive="active">
+                <a routerLink="home">Home</a>
+              </li>
+              <li routerLinkActive="active">
+                <a routerLink="about">About</a>
+              </li>
+              <li routerLinkActive="active">
+                <a routerLink="shoppingitem">ShoppingItem</a>
+              </li>
+              <li routerLinkActive="active">
+                <a routerLink="productlist">ProductList</a>
+              </li>
+              <li routerLinkActive="active" *ngIf="!isloggedIn">
+                <a routerLink="login">Login</a>
+              </li>
+              <li routerLinkActive="active" *ngIf="!isloggedIn">
+                <a routerLink="register">Register</a>
+              </li>
+              <li routerLinkActive="active" *ngIf="isloggedIn">
+                <a routerLink="logout">Logout</a>
+              </li>
+            </ul>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <router-outlet></router-outlet>
+
+</body>
+<footer>
+  <div class="footer panel">
+      Happy Learning Angular
+  </div>
+</footer>
+
+</html>

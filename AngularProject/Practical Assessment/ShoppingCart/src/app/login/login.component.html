@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="jumbotron">
+    <form #loginfrm="ngForm" (ngSubmit)="check(loginfrm)">
+      <div class="form-group">
+        <label for="username">UserName:</label>
+        <input type="text" class="form-control" name="username"/>
+      </div>
+
+      <div class="form-group">
+        <label for="pwd">Password:</label>
+        <input type="password" class="form-control" name="pwd"/>
+      </div>
+
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+</div>

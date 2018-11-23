@@ -1,0 +1,36 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    Welcome to {{ title }}!
+  </h1>
+  <!--<app-employee></app-employee>
+  <app-employee-info></app-employee-info>
+  <app-contact-us></app-contact-us>-->
+</div>
+
+<div style="padding:5px">
+  <ul class="nav nav-tabs">
+    <li routerLinkActive="active">
+      <a routerLink="home">Home</a>
+    </li>
+    <li routerLinkActive="active">
+        <a routerLink="employeelist">Employee List</a>
+    </li>
+    <li routerLinkActive="active">
+        <a routerLink="employees">Employees</a>
+    </li>
+    <li routerLinkActive="active">
+      <a routerLink="employees from services">Employees From Service</a>
+    </li>
+    <li routerLinkActive="active">
+      <a routerLink="Create Employees">Create Employees</a>
+    </li>
+    <li routerLinkActive="active">
+        <a routerLink="Items from Services">Items from Services</a>
+      </li>
+  </ul>
+  <br/>
+  <router-outlet></router-outlet>
+</div>
+
+

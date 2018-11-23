@@ -1,0 +1,25 @@
+<div class="container">
+<form #listfrm="ngForm" (ngSubmit)="additem(listfrm)">
+<div>
+  <select name="curr">
+    <option *ngFor="let c of productlist" value="c.currency">{{c.currency}}</option>
+  </select>
+</div>
+
+<div class="col-md-4 form-group " *ngFor="let p of productlist">
+  <div>
+  <img [src]="'../../assets/images/' + p.imageName" class="image-rounded image-responsive" style="width:200px; height:200px"/>
+    <div class="col-xm-6">
+      <div class="row">
+        {{p.name}} 
+      </div>
+    </div>
+    <div class="col-xs-6">
+      <div class="row">
+        {{p.price}}
+      </div>
+    </div>
+  </div>  
+</div>
+</form>
+</div>

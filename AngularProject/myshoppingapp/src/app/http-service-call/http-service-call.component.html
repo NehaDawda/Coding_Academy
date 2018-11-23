@@ -1,0 +1,69 @@
+
+<div class="container">
+    <div class="jumbotron">
+      <form #frm="ngForm" (ngSubmit)="putItems(frm)" *ngIf="!toggleForm" >
+        <h2>Add Item</h2>
+        <div class="form-group">
+          <label for="itemid">
+            ID
+          </label>
+          <input type="text" class="form-control" name="itemid" [(ngModel)]="itemid"/>
+        </div>
+        
+        <div class="form-group">
+          <label>Name</label>
+          <input type="text" class="form-control"name="itemname" [(ngModel)]="itemname"/>  
+        </div>
+        
+        <div class="form-group">
+          <label>Quantity</label>
+          <input type="text" class="form-control" name="itemqty" [(ngModel)]="itemqty">
+        </div>
+        
+        
+        <button type="Submit" class="btn btn-success">Add Items</button>
+      </form>    
+
+      <form #editform="ngForm" (ngSubmit)="editItem(editform)" *ngIf="toggleForm" >
+        <h2>Edit Item</h2>  
+        <div class="form-group">
+          <label>Name</label>
+          <input type="text" class="form-control" name="itemname" [(ngModel)]="edit_Item.name"/>  
+        </div>
+          
+        <div class="form-group">
+          <label>Quantity</label>
+          <input type="text" class="form-control" name="itemqty" [(ngModel)]="edit_Item.quantity">
+        </div>  
+        <button type="Submit" class="btn btn-success">Save</button>
+        <button (click)="hideEditForm()" class="btn btn-danger">Cancel</button>
+      </form> 
+    </div>
+</div>
+<div class="container">
+  <div class="jumbotron">
+    <table border="1px solid black">
+      <thead>
+        <tr>
+            <th class="col-md-2">ID</th>
+            <th class="col-md-4">Name</th>
+            <th class="col-md-3">Quantity</th>
+            <th colspan="2" class="class-md-4"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let i of itemlist;">
+            <td class="col-md-2">{{i.id}}</td>
+            <td class="col-md-4">{{i.name}}</td>
+            <td class="col-md-3">{{i.quantity}}</td>
+            <td class="col-md-2" style="padding: 2px"  ><button (click)="showEditForm(i)" class="btn btn-primary">Edit</button></td>
+            <td class="col-md-2"><button (click)="deleteItem(i.id)" class="btn btn-danger">Delete</button></td>
+        </tr>
+        <tr *ngIf="!itemlist || itemlist.length==0">
+          <td colspan="5">No Items Found</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>  
+  
