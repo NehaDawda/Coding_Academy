@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <script>
+            function calculate(){
+                var n1=Number(document.getElementById("num1").value);
+                var n2=Number(document.getElementById("num2").value);
+                
+                var op=document.getElementById("operator").value;
+                
+                switch(op){
+                    case "+": 
+                        document.getElementById("result").value = n1+n2;
+                        break;
+                    case "-":
+                        document.getElementById("result").value = n1-n2;
+                        break;
+                    case "*":
+                        document.getElementById("result").value = n1*n2;
+                        break;
+                    case "/":
+                        if(n2==0){
+                            document.getElementById("result").value="divide by zero"
+                        }
+                        else{
+                            document.getElementById("result").value = n1/n2;
+                        }
+                        
+                        break;
+                }            
+            }
+        </script>
+    </head>
+    <body>
+        Enter the First Number : <textarea id="num1" rows="1" cols="10"></textarea>
+        Enter the Second Number : <textarea id="num2"rows="1" cols="10"></textarea>
+
+        <select id="operator">
+            <option value="+">+</option>
+            <option value="-" >-</option>
+            <option value="*" >*</option>
+            <option value="/" >/</option>
+        </select>
+
+        <input type="button" value="Calculate" onclick="calculate()"/>
+        Result : <textarea id="result" rows="1" cols="10"></textarea>
+    </body>
+</html>

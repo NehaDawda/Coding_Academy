@@ -1,0 +1,58 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="style/main.css" />
+    <script src="scripts/main.js"></script>
+</head>
+<body>
+    <form id="frm1">
+        <table>
+            <tbody>
+                <tr>
+                    <td class="label">Enter Student Number</td>
+                    <td ><input type="text" class="inputs" id="studId"/></td>
+                </tr>
+                <tr>
+                    <td class="label">Enter Student Name</td>
+                    <td><input type="text" class="inputs" id="studName"/></td>
+                </tr>
+                <tr>
+                    <td class="label">Choose College</td>
+                    <td >
+                        <select id="college"  onchange="populateDept()">
+                            <option value="Select College" selected>Select College</option>
+                            <option value="IIT-B">IIT-B</option>
+                            <option value="IIT-M">IIT-M</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label">Choose Dept</td>
+                    <td>
+                        <select id="dept">
+                            <option value="Select Dept" selected>Select Dept</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label">Enter Internal Score</td>
+                    <td><input type="text" class="inputs" id="intScore"/></td>
+                </tr>
+                <tr>
+                    <td class="label">Enter External Score</td>
+                    <td><input type="text" class="inputs" id="extScore"/></td>
+                </tr>
+                <tr>
+                    <td>
+                    <input type="button" value="Calculate Score" onclick="validate()"/>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+</body>
+</html>

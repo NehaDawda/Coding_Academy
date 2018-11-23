@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <title>
+            ArrayDemo
+        </title>
+    </head>
+    <body>
+        <script>
+            var arr = new Array("rashmi","parth","anushka");
+            document.write("The length of an array is "+arr.length + "<br/>");
+            document.write("*************************************************");
+            document.write("<br>");
+            
+            var arrjoin = arr.join(",");
+            document.write(arrjoin);
+            document.write("<br>");
+            
+            var arrslice = arr.slice(-3,-1);
+            document.write("*************************************************");
+            document.write("<br>");
+            
+            document.write(arrslice);
+            document.write("<br>");
+            var arrcon = arr.concat(arrslice);
+            
+            document.write("*************************************************");
+            document.write("<br>");
+            
+            document.write(arrcon);
+        </script>
+    </body>
+</html>

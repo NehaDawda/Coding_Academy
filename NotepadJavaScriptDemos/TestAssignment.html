@@ -1,0 +1,62 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="style/main.css" />
+    <script src="script/main.js"></script>
+</head>
+<body>
+    <form id="frm1">
+        <table>
+            <tbody>
+                <tr>
+                    <td class="label">Enter Employee Number</td>
+                    <td ><input type="text" class="inputs" id="empId"/></td>
+                </tr>
+                <tr>
+                    <td class="label">Enter Employee Name</td>
+                    <td><input type="text" class="inputs" id="ename"/></td>
+                </tr>
+                <tr>
+                    <td class="label">Choose Domain</td>
+                    <td >
+                        <select id="domain"  onchange="populateModule()">
+                            <option value="Select Domain" selected>Select Domain</option>
+                            <option value="JEE">JEE</option>
+                            <option value=".NET">.NET</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label">Choose Module</td>
+                    <td>
+                        <select id="modules">
+                            <option value="Select Module" selected>Select Module</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label">Enter MPT Marks</td>
+                    <td><input type="text" class="inputs" id="mptMarks"/></td>
+                </tr>
+                <tr>
+                    <td class="label">Enter MTT Marks</td>
+                    <td><input type="text" class="inputs" id="mttMarks"/></td>
+                </tr>
+                <tr>
+                    <td class="label">Enter Assignment Marks</td>
+                    <td><input type="text" class="inputs" id="assMarks"/></td>
+                </tr>
+                <tr>
+                    <td>
+                    <input type="button" value="Calculate Module Score" onclick="validate()"/>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+</body>
+</html>

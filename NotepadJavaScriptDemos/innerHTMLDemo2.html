@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <script>
+            function setContent1(){
+                document.getElementById("para").innerHTML="Setting <b>Message1</b>"
+            }
+            function setContent2(){
+                document.getElementById("para").innerHTML="Setting <br/><b>Message2</b>";
+            }
+        </script>
+    </head>
+    <body>
+        <input type="button" value="Show Message1" onclick="setContent1()"/>
+        <input type="button" value="Show Message2" onclick="setContent2()"/>
+        <p id="para"></p>
+    </body>
+</html>
