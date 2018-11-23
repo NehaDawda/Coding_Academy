@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" media="screen" href="style/Main.css" />
+        <script src="scripts/Main.js"></script>
+    </head>
+    <body>
+        <h2>Registration Page</h2>
+        <form id="form1">
+            <table border="1px solid black">
+                <tbody>
+                    <tr>
+                        <td>Name</td>
+                        <td><input type="text" id="name" required/></td>
+                        <td class="required">*</td>
+                    </tr>
+                    <tr>
+                        <td>Address</td>
+                        <td><textarea id="address" cols="30" rows="5"></textarea></td>
+                        <td class="required"></td>
+                    </tr>
+                    <tr>
+                        <td>ZipCode</td>
+                        <td><input type="text" id="zipCode" required/></td>
+                        <td class="required">*</td>
+                    </tr>
+                    <tr>
+                        <td>Country</td>
+                        <td>
+                            <select id="country" required>
+                                <option value="USA">USA</option>
+                                <option value="UK">UK</option>
+                                <option value="India">India</option>
+                            </select>
+                        </td>
+                        <td class="required">*</td>
+                    </tr>
+                    <tr>
+                        <td>Gender</td>
+                        <td>
+                            <input type="radio" value="Male" id="gender" required/>Male
+                            <input type="radio" value="Female" id="gender" required/>Female
+                        </td>
+                        <td class="required">*</td>
+                    </tr>
+                    <tr>
+                        <td>Preferences</td>
+                        <td>
+                            <input type="checkbox" value="Ruby" id="preference" required/>Ruby
+                            <input type="checkbox" value="Groovy" id="preference" required/>Groovy
+                            <input type="checkbox" value="Bluetooth" id="preference" required/>Bluetooth
+                        </td>
+                        <td class="required">*</td>
+                    </tr>
+                    <tr>
+                        <td>Phone*</td>
+                        <td><input type="number" id="phone" minlength="10" max="10" required/></td>
+                        <td class="required"></td>
+                    </tr>
+                    <tr>
+                        <td>Email</td>
+                        <td><input type="email" id="email" required/></td>
+                        <td class="required">*</td>
+                    </tr>
+                    <tr>
+                        <td>Password (6-8 characters)</td>
+                        <td><input type="password" id="pwd" minlength="6" maxlength="8" required/></td>
+                        <td class="required">*</td>
+                    </tr>
+                    <tr>
+                        <td>Verify Password</td>
+                        <td><input type="password" id="verifyPwd" minlength="6" maxlength="8" required/></td>
+                        <td class="required">*</td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <input type="submit" onclick="addUser()" value="SEND"/>
+                            <input type="reset" value="CLEAR"/>
+                        </td>
+                        <td class="required"></td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </form>
+    </body>
+</html>
