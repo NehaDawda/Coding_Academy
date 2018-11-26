@@ -1,0 +1,12 @@
+package com.jp;
+
+import java.util.LinkedList;
+
+public class DBTableRow {
+	private LinkedList datarow;
+	
+	public DBTableRow(){
+		datarow = new LinkedList();
+	}
+	
+}

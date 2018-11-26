@@ -1,0 +1,4 @@
+INDEX VERSION 1.129+C:\Users\Administrator\Documents\GitHub\Coding_Academy\JEE\.metadata\.plugins\org.eclipse.jdt.core
+3573985063.index
+3605796170.index
+2173313451.index
