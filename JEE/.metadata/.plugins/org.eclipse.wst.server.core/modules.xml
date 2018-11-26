@@ -2,4 +2,6 @@
 <modules>
   <module moduleId="org.eclipse.jst.jee.server:JPM_010_Lifecycle" serverId="Tomcat v8.5 Server at localhost"/>
   <module moduleId="org.eclipse.jst.jee.server:DBProject" serverId="Tomcat v8.5 Server at localhost"/>
+  <module moduleId="org.eclipse.jst.jee.server:JPM_020_Dispatching" serverId="Tomcat v8.5 Server at localhost"/>
+  <module moduleId="org.eclipse.jst.jee.server:JPM_030_Navigation" serverId="Tomcat v8.5 Server at localhost"/>
 </modules>
