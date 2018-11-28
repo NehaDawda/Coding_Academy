@@ -67,3 +67,15 @@
 0:0:0:0:0:0:0:1 - - [27/Nov/2018:16:23:16 +0530] "GET /JPM_050_Layer_dao-service/empList.do HTTP/1.1" 200 -
 0:0:0:0:0:0:0:1 - - [27/Nov/2018:16:23:20 +0530] "GET /JPM_050_Layer_dao-service/empList.do HTTP/1.1" 200 -
 0:0:0:0:0:0:0:1 - - [27/Nov/2018:16:23:20 +0530] "GET /JPM_050_Layer_dao-service/empList.do HTTP/1.1" 200 -
+127.0.0.1 - - [27/Nov/2018:16:49:57 +0530] "GET / HTTP/1.1" 404 1074
+0:0:0:0:0:0:0:1 - - [27/Nov/2018:16:50:16 +0530] "GET /JPM_050_Layer_dao-service/empList.do HTTP/1.1" 200 6358
+0:0:0:0:0:0:0:1 - - [27/Nov/2018:16:50:18 +0530] "GET /JPM_050_Layer_dao-service/empList.do HTTP/1.1" 200 6358
+0:0:0:0:0:0:0:1 - - [27/Nov/2018:16:50:18 +0530] "GET /JPM_050_Layer_dao-service/empList.do HTTP/1.1" 200 6358
+0:0:0:0:0:0:0:1 - - [27/Nov/2018:16:50:18 +0530] "GET /JPM_050_Layer_dao-service/empList.do HTTP/1.1" 200 6358
+0:0:0:0:0:0:0:1 - - [27/Nov/2018:16:50:19 +0530] "GET /JPM_050_Layer_dao-service/empList.do HTTP/1.1" 200 6358
+0:0:0:0:0:0:0:1 - - [27/Nov/2018:16:50:19 +0530] "GET /JPM_050_Layer_dao-service/empList.do HTTP/1.1" 200 6358
+0:0:0:0:0:0:0:1 - - [27/Nov/2018:16:50:19 +0530] "GET /JPM_050_Layer_dao-service/empList.do HTTP/1.1" 200 6358
+0:0:0:0:0:0:0:1 - - [27/Nov/2018:16:50:19 +0530] "GET /JPM_050_Layer_dao-service/empList.do HTTP/1.1" 200 6358
+0:0:0:0:0:0:0:1 - - [27/Nov/2018:16:50:20 +0530] "GET /JPM_050_Layer_dao-service/empList.do HTTP/1.1" 200 6358
+0:0:0:0:0:0:0:1 - - [27/Nov/2018:16:50:20 +0530] "GET /JPM_050_Layer_dao-service/empList.do HTTP/1.1" 200 6358
+0:0:0:0:0:0:0:1 - - [27/Nov/2018:16:51:25 +0530] "GET /JPM_050_Layer_dao-service/empList.do HTTP/1.1" 200 6358

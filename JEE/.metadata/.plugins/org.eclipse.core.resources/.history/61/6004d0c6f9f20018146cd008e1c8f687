@@ -1,0 +1,6 @@
+package com.jp.hr.daos;
+
+public class DaoProductImpl implements DaoProduct{
+	
+
+}
