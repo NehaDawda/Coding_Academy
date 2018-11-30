@@ -11,4 +11,5 @@
   <module moduleId="org.eclipse.jst.jee.server:JPM_030_Navigation" serverId="Tomcat v8.5 Server at localhost"/>
   <module moduleId="org.eclipse.jst.jee.server:JPM_070_Session" serverId="Tomcat v8.5 Server at localhost"/>
   <module moduleId="org.eclipse.jst.jee.server:JPM_060_Cookies" serverId="Tomcat v8.5 Server at localhost"/>
+  <module moduleId="org.eclipse.jst.jee.server:JPM_120_Listenser" serverId="Tomcat v8.5 Server at localhost"/>
 </modules>

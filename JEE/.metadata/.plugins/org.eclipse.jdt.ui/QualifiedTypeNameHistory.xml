@@ -14,12 +14,21 @@
 <fullyQualifiedTypeName name="java.net.URLEncoder"/>
 <fullyQualifiedTypeName name="org.apache.catalina.servlet4preview.RequestDispatcher"/>
 <fullyQualifiedTypeName name="javax.servlet.http.Cookie"/>
-<fullyQualifiedTypeName name="javax.servlet.RequestDispatcher"/>
-<fullyQualifiedTypeName name="javax.servlet.http.HttpSession"/>
 <fullyQualifiedTypeName name="java.sql.Connection"/>
 <fullyQualifiedTypeName name="com.jp.hr.utilities.ConnectionFactory"/>
-<fullyQualifiedTypeName name="com.jp.hr.exceptions.HrException"/>
-<fullyQualifiedTypeName name="javax.servlet.ServletException"/>
 <fullyQualifiedTypeName name="com.jp.hr.services.ServiceEmployeeImpl"/>
 <fullyQualifiedTypeName name="com.jp.hr.services.Role1"/>
+<fullyQualifiedTypeName name="oracle.jdbc.pool.OracleDataSource"/>
+<fullyQualifiedTypeName name="javax.sql.DataSource"/>
+<fullyQualifiedTypeName name="javax.naming.InitialContext"/>
+<fullyQualifiedTypeName name="javax.naming.Context"/>
+<fullyQualifiedTypeName name="com.jp.hr.exceptions.HrException"/>
+<fullyQualifiedTypeName name="com.jp.hr.utilities.ConnectionFactoryTomcat"/>
+<fullyQualifiedTypeName name="javax.servlet.ServletException"/>
+<fullyQualifiedTypeName name="com.jp.hr.daos.DaoUser"/>
+<fullyQualifiedTypeName name="com.jp.hr.daos.DaoUserImpl"/>
+<fullyQualifiedTypeName name="com.jp.hr.services.ServiceUser"/>
+<fullyQualifiedTypeName name="com.jp.hr.entities.User"/>
+<fullyQualifiedTypeName name="javax.servlet.RequestDispatcher"/>
+<fullyQualifiedTypeName name="javax.servlet.http.HttpSession"/>
 </qualifiedTypeNameHistroy>

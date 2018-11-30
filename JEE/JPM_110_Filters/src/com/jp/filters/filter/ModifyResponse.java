@@ -18,7 +18,7 @@ public class ModifyResponse implements Filter {
 
 	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
 		// Before part
-		System.out.println("In before part of filter");
+		System.out.println("In before part of filter MR");
 		RequestDispatcher dispatch = request.getRequestDispatcher("/WEB-INF/jsps/Head.jsp");
 		dispatch.include(request, response);
 		
@@ -27,7 +27,7 @@ public class ModifyResponse implements Filter {
 		//After part
 		dispatch = request.getRequestDispatcher("/WEB-INF/jsps/Footer.jsp");
 		dispatch.include(request, response);
-		System.out.println("In after part of filter");
+		System.out.println("In after part of filter MR");
 	}
 
 	
