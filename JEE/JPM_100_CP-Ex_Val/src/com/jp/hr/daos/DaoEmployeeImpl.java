@@ -11,6 +11,7 @@ import javax.sql.DataSource;
 
 import com.jp.hr.entities.Employee;
 import com.jp.hr.exceptions.HrException;
+import com.jp.hr.utilities.ConnectionFactory;
 import com.jp.hr.utilities.ConnectionFactoryTomcat;
 
 /*
@@ -117,16 +118,16 @@ public class DaoEmployeeImpl implements DaoEmployee{
 
 	@Override
 	public boolean insertNewRecord(Employee emp) throws HrException {
-		String qry = "INSERT INTO EMPLOYEE(employee_id,first_name,last_name) VALUES (?,?,?)";
+		String qry = "INSERT INTO EMPLOYEE(employee_id,first_name,last_name) VALUES (seqEmpId.nextval,?,?)";
 		Connection connect = null;
 		PreparedStatement pstmt = null;
 		
 		try {
 			connect = dataSource.getConnection();
 			pstmt = connect.prepareStatement(qry);
-			pstmt.setInt(1, emp.getEmpId());
-			pstmt.setString(2, emp.getFirstName());
-			pstmt.setString(3, emp.getLastName());
+			//pstmt.setInt(1, emp.getEmpId());
+			pstmt.setString(1, emp.getFirstName());
+			pstmt.setString(2, emp.getLastName());
 			
 			int recInserted = pstmt.executeUpdate();
 			
