@@ -1,0 +1,5 @@
+com\synergetics\hibernate\util\HibernateUtil.class
+com\synergetics\hibernate\main\HQLExamples.class
+com\lnt\maven\model\Employee.class
+com\synergetics\hibernate\model\Address.class
+com\synergetics\hibernate\model\Employee.class

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Command line suite" duration-ms="2708" started-at="2018-11-27T05:07:42Z" finished-at="2018-11-27T05:07:45Z">
+    <groups>
+    </groups>
+    <test name="Command line test" duration-ms="2708" started-at="2018-11-27T05:07:42Z" finished-at="2018-11-27T05:07:45Z">
+      <class name="com.lnt.maven.test.TestEmployee">
+        <test-method status="PASS" signature="testEmp()[pri:0, instance:com.lnt.maven.test.TestEmployee@3d24753a]" name="testEmp" duration-ms="26" started-at="2018-11-27T05:07:42Z" finished-at="2018-11-27T05:07:42Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testEmp -->
+      </class> <!-- com.lnt.maven.test.TestEmployee -->
+      <class name="com.lnt.maven.test.TestSessionFactory">
+        <test-method status="PASS" signature="testSessionFactory()[pri:0, instance:com.lnt.maven.test.TestSessionFactory@59a6e353]" name="testSessionFactory" duration-ms="2621" started-at="2018-11-27T05:07:42Z" finished-at="2018-11-27T05:07:45Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSessionFactory -->
+      </class> <!-- com.lnt.maven.test.TestSessionFactory -->
+    </test> <!-- Command line test -->
+  </suite> <!-- Command line suite -->
+</testng-results>
