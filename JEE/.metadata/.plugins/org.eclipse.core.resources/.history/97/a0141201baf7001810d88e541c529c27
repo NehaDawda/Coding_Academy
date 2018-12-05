@@ -1,0 +1,17 @@
+package com.jpm.jpacrud.test;
+
+import org.junit.BeforeClass;
+
+import com.jpm.jpacrud.doa.EmployeeDao;
+import com.jpm.jpacrud.doa.IEmployeeDao;
+import com.jpm.jpacrud.service.IEmployeeService;
+
+public class EmployeeServiceTest {
+	private static IEmployeeService employeeService;
+	
+	@BeforeClass
+	public static void testServiceObject(){
+		employee = new EmployeeDao();
+		
+	}
+}

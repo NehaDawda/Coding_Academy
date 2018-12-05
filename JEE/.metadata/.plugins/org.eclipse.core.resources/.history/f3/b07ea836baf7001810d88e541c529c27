@@ -1,0 +1,16 @@
+package com.jpm.jpacrud.test;
+
+import org.junit.BeforeClass;
+
+import com.jpm.jpacrud.service.EmployeeService;
+import com.jpm.jpacrud.service.IEmployeeService;
+
+public class EmployeeServiceTest {
+	private static IEmployeeService employeeService;
+	
+	@BeforeClass
+	public static void testServiceObject(){
+		employeeService = new EmployeeService();
+		
+	}
+}

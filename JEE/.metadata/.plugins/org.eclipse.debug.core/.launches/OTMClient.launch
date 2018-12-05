@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.eclipse.jdt.launching.localJavaApplication">
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
+<listEntry value="/JPM_133_JPA_Association_OTM_BI/src/com/jpm/otm/client/OTMClient.java"/>
+</listAttribute>
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
+<listEntry value="1"/>
+</listAttribute>
+<stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="com.jpm.otm.client.OTMClient"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="JPM_133_JPA_Association_OTM_BI"/>
+</launchConfiguration>

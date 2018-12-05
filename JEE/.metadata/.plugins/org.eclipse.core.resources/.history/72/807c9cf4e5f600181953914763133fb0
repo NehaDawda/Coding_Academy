@@ -1,0 +1,5 @@
+package com.jp.shopping.services;
+
+public class ServiceOrderImpl {
+
+}

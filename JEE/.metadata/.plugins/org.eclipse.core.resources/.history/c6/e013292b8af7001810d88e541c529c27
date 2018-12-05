@@ -1,0 +1,12 @@
+/**
+ * 
+ */
+package com.jpm.jpa.entities;
+
+/**
+ * @author Administrator
+ *
+ */
+public class Employee {
+
+}

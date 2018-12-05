@@ -1,0 +1,51 @@
+package com.jp.shopping.entities;
+
+import java.util.ArrayList;
+
+public class Order {
+	private int customerId;
+	private int orderId;
+	private ArrayList<String> itemsId;
+	
+	public Order(int customerId, int orderId, ArrayList<String> itemsId) {
+		super();
+		this.customerId = customerId;
+		this.orderId = orderId;
+		this.itemsId = itemsId;
+	}
+
+	public Order(int customerId, ArrayList<String> itemsId) {
+		super();
+		this.customerId = customerId;
+		this.itemsId = itemsId;
+	}
+	
+	public int getCustomerId() {
+		return customerId;
+	}
+
+	public void setCustomerId(int customerId) {
+		this.customerId = customerId;
+	}
+
+	public int getOrderId() {
+		return orderId;
+	}
+
+	public void setOrderId(int orderId) {
+		this.orderId = orderId;
+	}
+
+	public ArrayList<String> getItemsId() {
+		return itemsId;
+	}
+
+	public void setItemId(ArrayList<String> itemsId) {
+		this.itemsId = itemsId;
+	}
+
+	@Override
+	public String toString() {
+		return "Order [customerId=" + customerId + ", orderId=" + orderId + ", itemId=" + itemsId + "]";
+	}
+}

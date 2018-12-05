@@ -1,0 +1,58 @@
+/**
+ * 
+ */
+package com.jpm.jpacrud.dao;
+
+import java.util.List;
+
+import javax.persistence.EntityManager;
+
+import com.jpm.jpacrud.entities.Employee;
+import com.jpm.jpacrud.exception.EmployeeException;
+import com.jpm.jpacrud.util.JPAUtil;
+
+/**
+ * @author Administrator
+ *
+ */
+public class EmployeeDao implements IEmployeeDao {
+	//prep work in dao -> EntityManager Object
+	private EntityManager entityManager;
+	
+	public EmployeeDao() {
+		 entityManager = JPAUtil.getEntityManager();
+	}
+	/* (non-Javadoc)
+	 * @see com.jpm.jpacrud.doa.IEmployeeDao#addEmployee(com.jpm.jpacrud.entities.Employee)
+	 */
+	@Override
+	public Long addEmployee(Employee employee) throws EmployeeException {
+		entityManager.getTransaction().begin();
+		entityManager.persist(employee);
+		entityManager.getTransaction().commit();
+		return employee.getEmployeeId();
+	}
+	@Override
+	public List<Employee> getEmployeeList() throws EmployeeException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	@Override
+	public Employee getEmployeeById(Long empId) throws EmployeeException {
+		entityManager.getTransaction().begin();
+		Employee emp = entityManager.find(Employee.class, empId);
+		entityManager.getTransaction().commit();
+		return emp;
+	}
+	@Override
+	public Employee updateEmployee(Employee employee) throws EmployeeException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	@Override
+	public int deleteEmployeeById(Long empId) throws EmployeeException {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy package &apos;com.jpm.lifecycle.util&apos; to &apos;JPM_132_EmployeeCRUD/src&apos;&#x0D;&#x0A;- Original project: &apos;JPM_131_JPA_ObjectLifeCycle&apos;&#x0D;&#x0A;- Destination element: &apos;JPM_132_EmployeeCRUD/src&apos;&#x0D;&#x0A;- Original element: &apos;JPM_131_JPA_ObjectLifeCycle/src/com.jpm.lifecycle.util&apos;" description="Copy package" destination="=JPM_132_EmployeeCRUD/src" element1="/src&lt;com.jpm.lifecycle.util" flags="589830" fragments="1" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyPackages" stamp="1543919032720" version="1.0"/>
+</session>

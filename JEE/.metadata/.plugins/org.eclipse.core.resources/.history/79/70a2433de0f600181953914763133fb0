@@ -1,0 +1,9 @@
+package com.jp.shopping.dao;
+
+import java.util.ArrayList;
+
+public interface DaoItem {
+	public ArrayList<Employee> getEmpList() throws HrException;
+	public Employee getEmpDetails(int empId) throws HrException;
+	public boolean insertNewRecord(Employee emp) throws HrException;
+}

@@ -1,0 +1,8 @@
+package com.jpm.jpacrud.exception;
+
+/*
+ * @author Neha
+ */
+public class EmployeeException extends Exception {
+
+}

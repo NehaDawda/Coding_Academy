@@ -1,0 +1,58 @@
+package com.jp.shopping.dao;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+
+import javax.sql.DataSource;
+
+import com.jp.shopping.entities.Order;
+import com.jp.shopping.exception.ShoppingException;
+import com.jp.shopping.utilities.ConnectionFactoryTomcat;
+
+public class DaoOrderImpl implements DaoOrder{
+	private DataSource dataSource;
+	
+	public DaoOrderImpl() throws ShoppingException{
+		try {
+			//ConnectionFactory factory = ConnectionFactory.getConnectionFactory();
+			ConnectionFactoryTomcat factory = ConnectionFactoryTomcat.getConnectionFactory();
+			dataSource = factory.getDataSource();
+		} catch (Exception e) {
+			throw new ShoppingException("Problem in procurring connection",e);
+		} 
+	}
+	
+	@Override
+	public boolean insertNewProduct(Order order) throws ShoppingException {
+		String qry = "INSERT INTO ORDER_MASTER(customer_id,order_id,item_id) VALUES (?,order_seq.nextval,?)";
+		Connection connect = null;
+		PreparedStatement pstmt = null;
+		
+		try {
+			connect = dataSource.getConnection();
+			pstmt = connect.prepareStatement(qry);
+			pstmt.setInt(1, order.getCustomerId());
+			pstmt.setString(2, order.getItemId());
+			
+			int recInserted = pstmt.executeUpdate();
+			
+			return recInserted == 1 ? true : false;
+			
+		} catch (SQLException e) {
+			throw new ShoppingException("Problem in adding order details.",e);
+		} finally {
+			try {
+				if(pstmt != null){
+					pstmt.close();
+				}
+				if(connect != null){
+					connect.close();
+				}
+			} catch (SQLException e) {
+				throw new ShoppingException("Problem in closing resources.", e);
+			}
+		}
+	}
+	
+}

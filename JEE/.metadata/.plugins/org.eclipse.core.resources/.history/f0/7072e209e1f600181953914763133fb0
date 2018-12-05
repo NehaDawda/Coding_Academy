@@ -1,0 +1,21 @@
+package com.jp.shopping.dao;
+
+import java.util.ArrayList;
+
+import com.jp.shopping.entities.Item;
+import com.jp.shopping.exception.ShoppingException;
+
+public class DaoItemImpl implements DaoItem{
+
+	@Override
+	public ArrayList<Item> getItemList() throws ShoppingException {
+		
+		return null;
+	}
+
+	@Override
+	public Item getItemDetails(int empId) throws ShoppingException {
+		return null;
+	}
+	
+}

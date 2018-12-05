@@ -1,0 +1,34 @@
+/**
+ * 
+ */
+package com.jpm.jpacrud.doa;
+
+import javax.persistence.EntityManager;
+
+import com.jpm.jpacrud.entities.Employee;
+import com.jpm.jpacrud.exception.EmployeeException;
+import com.jpm.jpacrud.util.JPAUtil;
+
+/**
+ * @author Administrator
+ *
+ */
+public class EmployeeDao implements IEmployeeDao {
+	//prep work in dao -> EntityManager Object
+	private EntityManager entityManager;
+	
+	public EmployeeDao() {
+		 entityManager = JPAUtil.getEntityManager();
+	}
+	/* (non-Javadoc)
+	 * @see com.jpm.jpacrud.doa.IEmployeeDao#addEmployee(com.jpm.jpacrud.entities.Employee)
+	 */
+	@Override
+	public Long addEmployee(Employee employee) throws EmployeeException {
+		entityManager.getTransaction().begin();
+		entityManager.persist(employee);
+		entityManager.getTransaction().commit();
+		return employee.getEmployeeId();
+	}
+
+}

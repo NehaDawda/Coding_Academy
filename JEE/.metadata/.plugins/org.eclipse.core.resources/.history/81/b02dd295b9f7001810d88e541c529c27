@@ -1,0 +1,24 @@
+/**
+ * 
+ */
+package com.jpm.jpacrud.service;
+
+import com.jpm.jpacrud.entities.Employee;
+import com.jpm.jpacrud.exception.EmployeeException;
+
+/**
+ * @author Administrator
+ *
+ */
+public class EmployeeService implements IEmployeeService {
+
+	/* (non-Javadoc)
+	 * @see com.jpm.jpacrud.service.IEmployeeService#addEmployee(com.jpm.jpacrud.entities.Employee)
+	 */
+	@Override
+	public Long addEmployee(Employee employee) throws EmployeeException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

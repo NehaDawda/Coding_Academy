@@ -1,0 +1,12 @@
+/**
+ * 
+ */
+package com.jpm.otm.entity;
+
+/**
+ * @author Administrator
+ *
+ */
+public class Employee {
+
+}

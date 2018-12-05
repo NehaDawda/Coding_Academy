@@ -1,0 +1,30 @@
+/**
+ * 
+ */
+package com.jpm.jpacrud.service;
+
+import com.jpm.jpacrud.doa.EmployeeDao;
+import com.jpm.jpacrud.doa.IEmployeeDao;
+import com.jpm.jpacrud.entities.Employee;
+import com.jpm.jpacrud.exception.EmployeeException;
+
+/**
+ * @author Administrator
+ *
+ */
+public class EmployeeService implements IEmployeeService {
+	private IEmployeeDao employeeDao;
+	
+	public EmployeeService() {
+		employeeDao = new EmployeeDao();
+	}
+	
+	/* (non-Javadoc)
+	 * @see com.jpm.jpacrud.service.IEmployeeService#addEmployee(com.jpm.jpacrud.entities.Employee)
+	 */
+	@Override
+	public Long addEmployee(Employee employee) throws EmployeeException {
+		return employeeDao.addEmployee(employee);
+	}
+
+}
