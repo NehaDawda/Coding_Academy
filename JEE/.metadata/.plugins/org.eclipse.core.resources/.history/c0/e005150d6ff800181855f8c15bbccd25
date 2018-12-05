@@ -1,0 +1,12 @@
+/**
+ * 
+ */
+package com.jpm.mtm.entities;
+
+/**
+ * @author Administrator
+ *
+ */
+public class Order {
+
+}

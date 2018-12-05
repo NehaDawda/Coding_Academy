@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="JPA_Employee_assignment">
+        <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
+        <property name="java-output-path" value="/JPA_Employee_assignment/build/classes"/>
+        <property name="context-root" value="JPM_JPA_Emp_Ass"/>
+    </wb-module>
+</project-modules>

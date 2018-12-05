@@ -1,0 +1,16 @@
+/**
+ * 
+ */
+package com.jp.oto.clients;
+
+import javax.persistence.EntityManager;
+
+/**
+ * @author Neha
+ *
+ */
+public class ClientOTO {
+	public static void Main(String[] args){
+		EntityManager em = JPAUtil
+	}
+}

@@ -1,0 +1,5 @@
+package com.jpm.mtm.entities;
+
+public class Product {
+
+}
