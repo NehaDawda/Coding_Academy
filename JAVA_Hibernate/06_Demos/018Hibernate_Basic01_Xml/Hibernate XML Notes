@@ -1,0 +1,59 @@
+Using Hibernate Opensource ORM tool to persist the java Object
+
+1> Java Class (Employee/Customer)
+2> Hibernate SessionFactory - object will create a sessionFactory to obtain session
+3> Hibernate Session - will create hibernate session to execute HQL
+4> Hibernate Query - will create hibernate Query object to execute query
+5> Criteria - condition or restriction
+6> Transaction - manage hibernate transaction
+7> hibernate.cfg.xml - Configuration file
+8> either XML mapping or Annotation for mapping class to table
+xml mapping - eg: emp.hbm.xml
+annotation - @ Entity @Table @ Id @ Column  etc...
+
+ORM theory
+
+Two ways to create hibernate mapping 
+
+Way 1> using a)hibernate.cfg.xml b) customer.hbm.xml 
+Way 2> Using Annotations (refer 018Hibernate_Basic02_Annotations)
+
+
+
+Way 1> 
+
+create core java project 
+
+1> 018Hibernate_Basic01_Xml
+
+model - Customer class 
+
+2>Database - create table mycustomer ( as per script with matching fields and datatypes)
+
+3> Add lib folder - build path ( add external jars -hibernate 4 jars)
+
+4> You need to write two files  under src folder ->
+	a)hibernate.cfg.xml 
+	b) customer.hbm.xml 
+
+a> hibernate.cfg.xml - all connection settings ( dialects , driver , username, password)
+
+plus -> <mapping resource="customer.hbm.xml"/> 	to file below 
+
+b>customer.hbm.xml 
+
+<class name="com.lnt.day18_hibernate.customer.model.Customer" table="mycustomer">
+
+table name - class
+primary key  - id
+other properties  - column
+
+
+if column names are different than field names , u need to mention 
+
+<id name="custId">
+		<column name="cust_Id"/>
+		<generator class="assigned"></generator>
+</id>
+		
+<property name="custName" >	<column name="cust_Name"/></property>

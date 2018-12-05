@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8'?>  
+<!DOCTYPE hibernate-mapping PUBLIC   "-//Hibernate/Hibernate Mapping DTD 3.0//EN"   "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<!-- mapping class with table  And properties with the column-->
+	<class name="com.lnt.day18_hibernate.employee.model.Employee"
+		table="lnt_employee">
+		<!-- primary key is mapped by id tag -->
+		<id name="empId" column="emp_Id">
+			<generator class="assigned"></generator><!-- assigned means programmer will be  assigning the primary key value not the db/hibernate-->
+		</id>
+		
+		<!-- mapping property -->
+		<property name="firstName" column="first_Name"></property>
+		<property name="lastName" column="last_Name"></property>
+		<property name="phoneNo"  column="phone_No"></property>
+		<property name="email"  column="email"></property>
+		<property name="doj"  column="doj" type="date"></property>		
+	</class>
+</hibernate-mapping>
+<!-- employee.hbm.xml -->
+
+
+<!-- if column names are different than properties of class specify them 
+	refer image in CV folder <id name="custId"> <column name="cust_Id"/> <generator 
+	class="assigned"></generator> </id> <property name="custName" > <column name="cust_Name"/></property> 
+	<property name="email"><column name="emails"/> </property> <property name="phone"><column 
+	name="phone_nos"/> </property> </class> -->

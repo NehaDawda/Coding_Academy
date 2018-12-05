@@ -1,0 +1,18 @@
+-accept the input from the user 
+
+	Menu (CRUDS)
+	1> add/insert/Create new Employee Record     - Create  (C)   -insert   
+	2> List/Retrieve/Fetch All the Records       - Retrieve(R)  
+	3> modify/Update existing Employee Record    - Update  (U)   	
+	4> Delete/Remove an Employee Record          - Create  (D)     
+	5> Search/find an Employee Record            - Search  (S)     
+
+
+Create a java project
+2> create a lib folder
+3> paste the required driver jar file and rt click ->build path	-> add to build path
+4> create a Database (Employee Table)	
+5> Obtain the connection using driver and DB properties
+
+
+talk to DB or ineract with DB by firing/execute SQL statement
