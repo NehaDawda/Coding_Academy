@@ -1,0 +1,56 @@
+package Day09_10_Assignment;
+
+import java.util.Iterator;
+import java.util.LinkedHashSet;
+
+public class ProductLinkedHashSet {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		LinkedHashSet<String> prodList1 = new LinkedHashSet<String>();
+		prodList1.add("Chikoo");
+		prodList1.add("Strawberry");
+		
+		LinkedHashSet<String> prodList2 = new LinkedHashSet<String>();
+		prodList2.add("Mango");
+		prodList2.add("Apple");
+		prodList2.add("Banana");
+		prodList2.addAll(prodList1);
+		
+		System.out.println("Before Sorting..");
+		
+		System.out.println(prodList2);
+		for (String prodName : prodList2) {
+			System.out.println(prodName);
+		}
+		//CAn not sort using LinkedHashSet
+		//Collections.sort(prodList2);
+		System.out.println();
+		System.out.println("After Sorting..");
+		
+		System.out.println(prodList2);
+		Iterator<String> itr = prodList2.iterator();
+		while(itr.hasNext()) {
+			System.out.println(itr.next());
+		}
+	}
+
+}
+
+output:
+Before Sorting..
+[Mango, Apple, Banana, Chikoo, Strawberry]
+Mango
+Apple
+Banana
+Chikoo
+Strawberry
+
+After Sorting..
+[Mango, Apple, Banana, Chikoo, Strawberry]
+Mango
+Apple
+Banana
+Chikoo
+Strawberry
+

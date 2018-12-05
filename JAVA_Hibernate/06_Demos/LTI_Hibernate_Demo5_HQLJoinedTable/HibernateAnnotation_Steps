@@ -1,0 +1,24 @@
+1> create a java project
+2> copy the lib folder to the project which contains all the hibernate jars
+3> select all jar files 
+,right click ->Build Path->Add to build path 
+4> create the entity/model class
+5> annotate the class with 
+javax.persistence.@Entity annotation (JPA annotation)
+6> annotate table name
+@Table(name="lntEmp123")
+
+7> mark primary key attribute with @Id and @GeneratedValue
+@Id //primary key attribute must be marks with @Id
+	@GeneratedValue(strategy=GenerationType.SEQUENCE,generator="EMP_GEN")
+	@SequenceGenerator(name="EMP_GEN",sequenceName="lntEmp123_seq")
+	
+8> mark other property with @Column
+@Column(name="first_name")
+
+//no Arg constructor
+//Overloaded constructor
+//getters and setters
+	//toString method
+		//implement serializable to class
+	//and rt click generate serial version id
