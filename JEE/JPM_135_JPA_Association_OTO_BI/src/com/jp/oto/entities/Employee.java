@@ -6,6 +6,7 @@ package com.jp.oto.entities;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
@@ -16,7 +17,7 @@ import javax.persistence.Table;
  *
  */
 @Entity
-@Table(name="EMP_OTO")
+@Table(name="EMP_OTO1")
 public class Employee {
 
 	@Id
@@ -29,7 +30,7 @@ public class Employee {
 	@Column(name="EMP_SAL")
 	private Double empSal;
 	
-	@OneToOne(cascade=CascadeType.ALL)
+	@OneToOne(mappedBy="employee", cascade=CascadeType.ALL, fetch=FetchType.LAZY)
 	@JoinColumn(name="ADDRESS_ID")
 	private Address address;
 

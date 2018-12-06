@@ -58,12 +58,12 @@ public class EmployeeDao implements IEmployeeDao {
 	
 	@Override
 	public void commitTransaction() {
-		entityManager.getTransaction().begin();
+		entityManager.getTransaction().commit();
 	}
 	
 	@Override
 	public void beginTransaction() {
-		entityManager.getTransaction().commit();
+		entityManager.getTransaction().begin();
 	}
 
 }

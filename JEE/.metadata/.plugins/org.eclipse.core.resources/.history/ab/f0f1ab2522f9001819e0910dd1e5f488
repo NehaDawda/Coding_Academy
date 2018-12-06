@@ -1,0 +1,12 @@
+/**
+ * 
+ */
+package com.jp.inheritence.entities;
+
+/**
+ * @author Administrator
+ *
+ */
+public class SalesManager extends Manager {
+
+}

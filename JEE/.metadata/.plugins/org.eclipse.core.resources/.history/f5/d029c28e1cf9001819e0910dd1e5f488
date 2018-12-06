@@ -1,0 +1,29 @@
+/**
+ * 
+ */
+package com.jp.oto.entities;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+/**
+ * @author Neha
+ *
+ */
+@Entity
+@Table(name="EMP_TPC")
+public class Employee {
+
+	@Id
+	@Column(name="EMP_ID")
+	private Long empId;
+	
+	@Column(name="EMP_NAME")
+	private String empName;
+	
+	@Column(name="EMP_SAL")
+	private Double empSal;
+	
+}

@@ -151,7 +151,7 @@
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log" suffix=".txt"/>
 
       
-      <Context docBase="C:\Users\Administrator\Documents\GitHub\Coding_Academy\JEE\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\ROOT" path="" reloadable="false"/><Context docBase="C:\Users\Administrator\Documents\GitHub\Coding_Academy\JEE\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\OnlineShopping_JP_NehaDawda" path="/OnlineShopping_JP_NehaDawda" reloadable="true" source="org.eclipse.jst.jee.server:OnlineShopping_JP_NehaDawda"/></Host>
+      <Context docBase="C:\Users\Administrator\Documents\GitHub\Coding_Academy\JEE\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\ROOT" path="" reloadable="false"/><Context docBase="C:\Users\Administrator\Documents\GitHub\Coding_Academy\JEE\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\JPM_JPA_Emp_Ass" path="/JPM_JPA_Emp_Ass" reloadable="true" source="org.eclipse.jst.jee.server:JPM_JPA_Emp_Ass"/></Host>
     </Engine>
   </Service>
 </Server>

@@ -1,7 +1,7 @@
 package com.jp.hr.servlets;
 
 import java.io.IOException;
-import java.util.ArrayList;
+import java.util.List;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -18,12 +18,6 @@ import com.jp.hr.services.ServiceEmployee;
 import com.jp.hr.services.ServiceEmployeeImpl;
 import com.jp.hr.services.ServiceProduct;
 import com.jp.hr.services.ServiceProductImpl;
-
-/*
- *	Front Controller: A JEE design pattern.
- *	Command pattern (GoF Pattern).
- *	 
- */	
 
 @WebServlet("*.do")  //A generic url.
 public class FrontController extends HttpServlet {
@@ -89,7 +83,7 @@ public class FrontController extends HttpServlet {
 								break;
 				}
 				case "empList":{
-								ArrayList<Employee> empList = services.getEmpList();
+								List<Employee> empList = services.getEmpList();
 								request.setAttribute("empList", empList);
 								jspName = "EmpList";
 								
@@ -109,7 +103,7 @@ public class FrontController extends HttpServlet {
 								String lastName = request.getParameter("lastName");
 								int empId = Integer.parseInt(empIdStr);
 								Employee emp = new Employee(empId, firstName, lastName);
-								boolean isSuccessful = services.joinNewEmployee(emp);
+								boolean isSuccessful = services.joinNewEmployee(emp)>0 ? true : false;
 								String msg = isSuccessful ? "Employee Inserted" : "Insertion Failed";
 								request.setAttribute("message", msg);
 								jspName = "NewJoining";
@@ -120,7 +114,7 @@ public class FrontController extends HttpServlet {
 								break;
 				}
 				case "productList":{
-					ArrayList<Product> productList = productService.getProductList();
+					List<Product> productList = productService.getProductList();
 					request.setAttribute("productList", productList);
 					jspName = "ProductList";
 					
@@ -144,7 +138,7 @@ public class FrontController extends HttpServlet {
 					double productPrice = Double.parseDouble(productPriceStr);
 					
 					Product product = new Product(productId, productName, productCategory,productPrice);
-					boolean isSuccessful = productService.addNewProduct(product);
+					boolean isSuccessful = productService.addNewProduct(product)>0 ? true : false;
 					String msg = isSuccessful ? "Product Inserted" : "Insertion Failed";
 					request.setAttribute("message", msg);
 					jspName = "NewProduct";
@@ -159,10 +153,10 @@ public class FrontController extends HttpServlet {
 										
 					int productId = Integer.parseInt(productIdStr);
 					
-					boolean isSuccessful = productService.removeProduct(productId);
+					boolean isSuccessful = productService.removeProduct(productId)>0 ? true : false;
 					String msg = isSuccessful ? "Product Deleted" : "Deletion Failed";
 					request.setAttribute("message", msg);
-					ArrayList<Product> productList = productService.getProductList();
+					List<Product> productList = productService.getProductList();
 					request.setAttribute("productList", productList);
 					jspName = "ProductList";
 					break;
@@ -188,7 +182,7 @@ public class FrontController extends HttpServlet {
 					double productPrice = Double.parseDouble(productPriceStr);
 					
 					Product product = new Product(productId, productName, productCategory,productPrice);
-					boolean isSuccessful = productService.updateProductDetails(product);
+					boolean isSuccessful = productService.updateProductDetails(product) > 0 ? true : false;
 					String msg = isSuccessful ? "Product Updated" : "Updation Failed";
 					request.setAttribute("message", msg);
 					request.setAttribute("productDetails", product);

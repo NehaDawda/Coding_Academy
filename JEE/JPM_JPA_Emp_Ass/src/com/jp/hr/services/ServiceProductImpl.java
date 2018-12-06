@@ -1,6 +1,6 @@
 package com.jp.hr.services;
 
-import java.util.ArrayList;
+import java.util.List;
 
 import com.jp.hr.daos.DaoProduct;
 import com.jp.hr.daos.DaoProductImpl;
@@ -14,7 +14,7 @@ public class ServiceProductImpl implements ServiceProduct{
 		daoProduct = new DaoProductImpl();
 	}
 	@Override
-	public ArrayList<Product> getProductList() throws HrException {
+	public List<Product> getProductList() throws HrException {
 		return daoProduct.getProductList();
 	}
 
@@ -24,16 +24,27 @@ public class ServiceProductImpl implements ServiceProduct{
 	}
 
 	@Override
-	public boolean addNewProduct(Product p) throws HrException {
-		return daoProduct.insertNewProduct(p);
+	public int addNewProduct(Product p) throws HrException {
+		daoProduct.beginTransaction();
+		int productId = daoProduct.insertNewProduct(p);
+		daoProduct.commitTransaction();
+		return productId;
 	}
+	
 	@Override
-	public boolean updateProductDetails(Product p) throws HrException {
-		return daoProduct.updateProduct(p);
+	public int updateProductDetails(Product p) throws HrException {
+		daoProduct.beginTransaction();
+		int productId = daoProduct.updateProduct(p);
+		daoProduct.commitTransaction();
+		return productId;
 	}
+	
 	@Override
-	public boolean removeProduct(int productId) throws HrException {
-		return daoProduct.deleteProduct(productId);
+	public int removeProduct(int productId) throws HrException {
+		daoProduct.beginTransaction();
+		int id = daoProduct.deleteProduct(productId);
+		daoProduct.commitTransaction();
+		return id;
 	}
 	
 }

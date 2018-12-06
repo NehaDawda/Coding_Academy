@@ -1,0 +1,74 @@
+package com.jp.hr.daos;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.persistence.EntityManager;
+import javax.persistence.Query;
+
+import com.jp.hr.entities.Employee;
+import com.jp.hr.exceptions.HrException;
+import com.jp.hr.utilities.ConnectionFactory;
+import com.jp.hr.utilities.JPAUtil;
+
+public class DaoEmployeeImpl implements DaoEmployee{
+	private EntityManager entityManager;
+	
+	public DaoEmployeeImpl() throws HrException{
+			entityManager = JPAUtil.getEntityManager();
+	}
+	
+	@Override
+	public List<Employee> getEmpList(){
+		Query query = entityManager.createQuery("from Employee");
+		List<Employee> empList = query.getResultList();
+		return empList;
+	}
+
+	@Override
+	public Employee getEmpDetails(int empId) throws HrException {
+		return entityManager.find(Employee.class, empId);
+	}
+
+	@Override
+	public boolean insertNewRecord(Employee emp) throws HrException {
+		String qry = "INSERT INTO EMPLOYEE(employee_id,first_name,last_name) VALUES (?,?,?)";
+		Connection connect = null;
+		PreparedStatement pstmt = null;
+		
+		try {
+			connect = factory.getConnection();
+			pstmt = connect.prepareStatement(qry);
+			pstmt.setInt(1, emp.getEmpId());
+			pstmt.setString(2, emp.getFirstName());
+			pstmt.setString(3, emp.getLastName());
+			
+			int recInserted = pstmt.executeUpdate();
+			
+			return recInserted == 1 ? true : false;
+			
+		} catch (SQLException e) {
+			throw new HrException("Problem in fetching.",e);
+		} finally {
+			try {
+				if(pstmt != null){
+					pstmt.close();
+				}
+				//factory.closeConnection();
+			} catch (SQLException e) {
+				throw new HrException("Problem in closing resources.", e);
+			}
+		}
+	}
+
+	@Override
+	protected void finalize() throws Throwable {
+		entityManager.close();
+	}
+	
+}

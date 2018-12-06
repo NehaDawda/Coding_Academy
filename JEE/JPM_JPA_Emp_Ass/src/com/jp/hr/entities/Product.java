@@ -1,9 +1,24 @@
 package com.jp.hr.entities;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="PRODUCT")
 public class Product {
+	@Id
+	@Column(name="ID")
 	private int productId;
+	
+	@Column(name="NAME")
 	private String productName;
+	
+	@Column(name="CATEGORY")
 	private String productCategory;
+	
+	@Column(name="PRICE")
 	private double productPrice;
 	
 	public Product() {

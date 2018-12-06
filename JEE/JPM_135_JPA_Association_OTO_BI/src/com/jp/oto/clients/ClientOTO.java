@@ -20,7 +20,7 @@ public class ClientOTO {
 		
 		//address obj
 		Address homeAddress = new Address();
-		homeAddress.setAddressId(120L);
+		homeAddress.setAddressId(110L);
 		homeAddress.setStreet("MG Road");
 		homeAddress.setCity("Pune");
 		homeAddress.setState("MH");
@@ -28,13 +28,13 @@ public class ClientOTO {
 		
 		//employee obj
 		Employee emp = new Employee();
-		emp.setEmpId(101L);
+		emp.setEmpId(100L);
 		emp.setEmpName("Zara");
 		emp.setEmpSal(99.99);
 		
 		//set address to the emp
 		emp.setAddress(homeAddress);
-		
+		homeAddress.setEmployee(emp);
 		//now persist the emp
 		em.persist(emp);
 		
