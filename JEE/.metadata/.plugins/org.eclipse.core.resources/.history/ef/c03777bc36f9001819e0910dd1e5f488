@@ -1,0 +1,12 @@
+/**
+ * 
+ */
+package com.jpm.jpql.entities;
+
+/**
+ * @author Administrator
+ *
+ */
+public class Book {
+
+}

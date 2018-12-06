@@ -1,0 +1,69 @@
+/**
+ * 
+ */
+package com.jpm.jpql.dao;
+
+import java.util.List;
+
+import javax.persistence.EntityManager;
+import javax.persistence.TypedQuery;
+
+import com.jpm.jpql.entities.Book;
+import com.jpm.jpql.util.JPAUtil;
+
+/**
+ * @author Administrator
+ *
+ */
+public class BookDao implements IBookDao {
+	private EntityManager entityManager;
+	
+	public BookDao() {
+		entityManager = JPAUtil.getEntityManager();
+	}
+	
+	@Override
+	public Book getBookById(int id) {
+		Book book = entityManager.find(Book.class, id);
+		return book;
+	}
+
+	@Override
+	public List<Book> getBookByTitle(String title) {
+		TypedQuery<Book> query = entityManager.createQuery("SELECT b FROM Book b WHERE b.title like :book_title",Book.class);
+		query.setParameter("book_title","%"+ title + "%");
+		List<Book> books = query.getResultList();
+		return books;
+	}
+
+	@Override
+	public Long getBookCount() {
+		TypedQuery<Long> query = entityManager.createQuery("SELECT count(b.id) FROM Book b",Long.class);
+		Long count = query.getSingleResult();
+		return count;
+	}
+
+	@Override
+	public List<Book> getAuthorBooks(String author) {
+		TypedQuery<Book> query = entityManager.createQuery("SELECT b FROM Book b WHERE b.author like :book_author",Book.class);
+		query.setParameter("book_author", "%" + author + "%");
+		List<Book> books = query.getResultList();
+		return books;
+	}
+
+	@Override
+	public List<Book> getAllBooks() {
+		TypedQuery<Book> query = entityManager.createNamedQuery("getAllBooks", Book.class);
+		List<Book> books = query.getResultList();
+		return books;
+	}
+
+	@Override
+	public List<Book> getBooksInPriceRange(double low, double high) {
+		TypedQuery<Book> query = entityManager.createQuery("SELECT b FROM Book b WHERE b.price between :low_price and :high_price",Book.class);
+		query.setParameter("low_price", low);
+		query.setParameter("high_price", high);
+		List<Book> books = query.getResultList();
+		return books;
+	}
+}

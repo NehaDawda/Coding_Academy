@@ -1,7 +1,6 @@
 INDEX VERSION 1.3+C:\Users\Administrator\Documents\GitHub\Coding_Academy\JEE\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
-617275914.index
-30329999.index
-954848218.index
-2150839585.index
 1272810044.index
 272128414.index
+617275914.index
+954848218.index
+2150839585.index

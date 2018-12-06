@@ -1,0 +1,5 @@
+package com.jpm.jpql.client;
+
+public class BookClient {
+
+}

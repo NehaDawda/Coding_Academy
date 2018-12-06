@@ -1,0 +1,20 @@
+package com.jpm.jpql.client;
+
+import com.jpm.jpql.services.BookService;
+import com.jpm.jpql.services.IBookService;
+
+public class BookClient {
+	public static void main(String[] args){
+		IBookService service = new BookService();
+		System.out.println("*********************Listing book with id 101*******************");
+		System.out.println("Book with ID 101: " + service.getBookById(101));
+		
+		System.out.println("*********************Listing book with title Pro Java 8 Programming*******************");
+		System.out.println("Book with ID 'Pro Java 8 Programming': " + service.getBookByTitle("%Java%"));
+		
+		System.out.println("*********************Listing All books *******************");
+		System.out.println("Books : " + service.getAllBooks());
+		
+		
+	}
+}

@@ -4,6 +4,7 @@ import java.util.List;
 
 import javax.persistence.EntityManager;
 import javax.persistence.Query;
+import javax.persistence.TypedQuery;
 
 import com.jp.hr.entities.Employee;
 import com.jp.hr.exceptions.HrException;
@@ -18,7 +19,8 @@ public class DaoEmployeeImpl implements DaoEmployee{
 	
 	@Override
 	public List<Employee> getEmpList() throws HrException{
-		Query query = entityManager.createQuery("from Employee");
+		TypedQuery<Employee> query = (TypedQuery<Employee>) entityManager.createQuery("from Employee");
+		//Query query = entityManager.createQuery("from Employee");
 		List<Employee> empList = query.getResultList();
 		return empList;
 	}
