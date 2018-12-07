@@ -1,0 +1,5 @@
+package com.jpm.collection.entity;
+
+public class Employee {
+
+}

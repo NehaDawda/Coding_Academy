@@ -1,0 +1,24 @@
+package com.jpm.bank.app.entities;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="BA_ACCOUNT")
+public class Account {
+	
+	@Id
+	@Column(name="ACCOUNT_ID")
+	private Long accountId;
+	
+	@Column(name="BALANCE")
+	private double balance;
+
+	@ManyToOne
+	@JoinColumn(name="CUSTOMER_ID")
+	private Customer customer;
+}

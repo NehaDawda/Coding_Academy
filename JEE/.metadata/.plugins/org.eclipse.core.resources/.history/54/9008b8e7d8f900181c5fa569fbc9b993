@@ -1,0 +1,10 @@
+package com.jpm.bank.app.entities;
+
+public class Customer {
+	private Long customerId;
+	private String customerName;
+	private String phone;
+	private String address;
+	private String email;
+	
+}

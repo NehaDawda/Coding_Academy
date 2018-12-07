@@ -1,0 +1,34 @@
+package com.jpm.collection.entity;
+
+public class Employee {
+	private int empId;
+	private String empName;
+	private double empSal;
+	private static int numId;
+	private static String companyName;
+	
+	//static block which is used to initiaize only static variable
+	static{
+		numId = (int) (1000 + Math.random()*123.123);
+	}
+	
+	//initializer block - used to initialize instance var before creation of an object
+	{
+		empId = numId++;
+	}
+
+	
+	public Employee() {
+		super();
+	}
+
+
+	public Employee(int empId, String empName, double empSal) {
+		super();
+		this.empId = empId;
+		this.empName = empName;
+		this.empSal = empSal;
+	}
+
+	
+}

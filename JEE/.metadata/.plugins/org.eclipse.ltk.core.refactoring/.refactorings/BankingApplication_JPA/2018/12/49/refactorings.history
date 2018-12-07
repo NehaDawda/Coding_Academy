@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename package &apos;com.jpm.jpql.util&apos; to &apos;com.jpm.bank.app.util&apos;&#x0D;&#x0A;- Original project: &apos;BankingApplication_JPA&apos;&#x0D;&#x0A;- Original element: &apos;BankingApplication_JPA/src/com.jpm.jpql.util&apos;&#x0D;&#x0A;- Renamed element: &apos;BankingApplication_JPA/src/com.jpm.bank.app.util&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename package &apos;com.jpm.jpql.util&apos;" flags="589830" hierarchical="false" id="org.eclipse.jdt.ui.rename.package" input="/src&lt;com.jpm.jpql.util" name="com.jpm.bank.app.util" qualified="false" references="true" stamp="1544155484756" textual="false" version="1.0"/>
+</session>

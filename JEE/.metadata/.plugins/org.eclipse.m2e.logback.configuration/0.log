@@ -502,3 +502,8 @@
 2018-12-06 17:23:01,474 [Worker-275] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
 2018-12-06 17:23:01,484 [Worker-275] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
 2018-12-06 17:23:01,485 [Worker-275] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-12-06 17:39:47,320 [Worker-282] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.jpm.jpa:JPM_140_SimpleMavenProject:0.0.1-SNAPSHOT @ C:\Users\Administrator\Documents\GitHub\Coding_Academy\JEE\JPM_140_SimpleMavenProject\pom.xml.
+2018-12-06 17:39:47,563 [Worker-282] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-12-06 17:39:47,566 [Worker-282] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-12-06 17:39:47,569 [Worker-282] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2018-12-06 17:39:47,570 [Worker-282] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
