@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:lang="http://www.springframework.org/schema/lang"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd
+           http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.0.xsd
+           http://www.springframework.org/schema/lang http://www.springframework.org/schema/lang/spring-lang-2.0.xsd
+           http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.0.xsd">
+	<!-- Step I -->
+	
+	<bean id="loggingInterceptor" class="pack_40_aop.pack_10_aspect.pack_20_configxml.LoggingAspect1" />
+
+	 
+	<aop:config>     
+		<aop:aspect ref="loggingInterceptor">
+			<aop:pointcut id="loggingPointcut1" expression="execution(* pack_40_aop.pack_10_aspect.pack_joinpoints..*.*(..))" />
+			<aop:around pointcut-ref="loggingPointcut1" method="log" />
+		</aop:aspect>
+	</aop:config>
+	 
+	
+	<!--
+	 <aop:pointcut id="loggingPointcut2" expression="execution(* pack_40_aop.pack_10_aspect.pack_joinpoints.pack_cust.*.apply*(..))" />
+	 <aop:around pointcut-ref="loggingPointcut2" method="log" />
+	 -->
+	 <!-- 
+	<aop:config>     
+		<aop:aspect ref="loggingInterceptor">
+			
+			<aop:pointcut id="loggingPointcut4" expression="within(pack_40_aop.pack_10_aspect.pack_joinpoints.pack_cust.*)" />
+			
+			<aop:around pointcut-ref="loggingPointcut4" method="log" />
+		</aop:aspect>
+	</aop:config>
+	 -->
+	<bean id="customerService" class="pack_40_aop.pack_10_aspect.pack_joinpoints.pack_cust.CustomerServiceImpl" />
+	<bean id="bussService" class="pack_40_aop.pack_10_aspect.pack_joinpoints.pack_buss.BusinessComponent" />
+</beans>

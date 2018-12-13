@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+	<!--  beans are not loaded in the order in which they are defined! -->
+
+	<bean id="postProcessor" class="pack_20_lifecycle.pack_10_bean_lifecycle.pack40_beanFactoryPostProcessor.BeanFactoryPostProcessorImpl" />
+	
+	<bean id="sample1" class="pack_20_lifecycle.pack_10_bean_lifecycle.pack40_beanFactoryPostProcessor.SampleBean1"
+			init-method="init"
+			destroy-method="destroy">
+			<property name="companyName" value="SAMPLE-I company" />
+	</bean>
+
+	<bean id="sample2" class="pack_20_lifecycle.pack_10_bean_lifecycle.pack40_beanFactoryPostProcessor.SampleBean2"
+			init-method="init"
+			destroy-method="destroy" >
+			<property name="companyName" value="SAMPLE-II company" />
+	</bean>
+
+</beans>

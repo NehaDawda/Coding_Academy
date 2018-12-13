@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  <display-name>JPM_142_JEE_Form_Security</display-name>
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+  <security-constraint>
+    <web-resource-collection>
+      <web-resource-name>JPM_142_JEE_FORM_Security</web-resource-name>
+      <url-pattern>/*</url-pattern>
+      <http-method>GET</http-method>
+      <http-method>POST</http-method>
+    </web-resource-collection>
+    <auth-constraint>
+      <description>Allowed Access to secured page to all tomcat users</description>
+      <role-name>tomcat</role-name>
+    </auth-constraint>
+  </security-constraint>
+  <security-role>
+    <role-name>tomcat</role-name>
+  </security-role>
+  <login-config>
+    <auth-method>FORM</auth-method>
+    <form-login-config>
+      <form-login-page>/login.jsp</form-login-page>
+      <form-error-page>/error.jsp</form-error-page>
+    </form-login-config>
+  </login-config>
+</web-app>

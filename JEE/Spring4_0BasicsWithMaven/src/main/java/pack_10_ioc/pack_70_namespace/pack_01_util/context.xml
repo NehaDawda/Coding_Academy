@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+ 
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="
+                http://www.springframework.org/schema/beans
+                http://www.springframework.org/schema/beans/spring-beans.xsd
+                http://www.springframework.org/schema/util
+                http://www.springframework.org/schema/util/spring-util-3.0.xsd"
+                > 
+
+   <bean id="services" class="pack_10_ioc.pack_70_namespace.pack_01_util.Services">
+		<property name="serverIps" ref="IpsConfig" />
+	</bean>
+	
+   	<!--
+	<bean id="IpsConfig" class="org.springframework.beans.factory.config.PropertiesFactoryBean">
+	   This is property class builder
+	  <property name="location" value="classpath:pack_10_ioc\pack_70_namespace\pack_01_util\server.properties"/>
+	</bean>
+	-->
+	
+	<util:properties id="IpsConfig" location="classpath:pack_10_ioc\pack_70_namespace\pack_01_util\server.properties" />
+	
+</beans>

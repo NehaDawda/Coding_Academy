@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+
+
+<!-- It is schema style configuration for Spring 2.5  -->
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+                http://www.springframework.org/schema/beans
+                http://www.springframework.org/schema/beans/spring-beans.xsd">
+   
+   <bean id="operands" class="pack_10_ioc.pack_50_exprLanguage.el030arithWithXml.Operands">
+   		<property name="value1" value="150" />
+   		<property name="value2" value="200" />
+   	</bean>
+   	
+   <bean id="operators" class="pack_10_ioc.pack_50_exprLanguage.el030arithWithXml.Operators">
+   		<property name="equalTest" value="#{operands.value1 == operands.value2}" />
+   		
+   		<property name="ltTest" value="#{operands.value1 lt operands.value2}" />
+   		<property name="leTest" value="#{operands.value1 le operands.value2}" />
+   		<property name="gtTest" value="#{operands.value1 gt operands.value2}" />
+   		<property name="geTest" value="#{operands.value1 ge operands.value2}" />
+   		
+   		<property name="andTest" value="#{operands.value1 == 150 and operands.value2 == 200}" />
+   		<property name="addTest" value="#{operands.value1 + operands.value2}" />
+   		
+   		<property name="concatStrTest" value="#{'Hello' + ' New ' + 'World'}" />
+   		<property name="ternaryTest" value="#{operands.value1 != operands.value2 ? 'not equal' : 'equal'}" />
+   	</bean>
+</beans>

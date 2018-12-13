@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+
+
+<!-- It is schema style configuration for Spring 2.5  -->
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+                http://www.springframework.org/schema/beans
+                http://www.springframework.org/schema/beans/spring-beans.xsd">
+   
+   <bean id="service" class="pack_30_more_ioc.pack_04_outsideObjects.pack_02EntityObjects.Services" />
+   
+   <bean id="emp" abstract="true" />
+		
+</beans>

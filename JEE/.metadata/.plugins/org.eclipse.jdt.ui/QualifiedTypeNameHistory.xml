@@ -1,17 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="com.jpm.otm.entity.Employee"/>
-<fullyQualifiedTypeName name="javax.persistence.Temporal"/>
-<fullyQualifiedTypeName name="javax.persistence.TemporalType"/>
-<fullyQualifiedTypeName name="javax.persistence.JoinTable"/>
-<fullyQualifiedTypeName name="javax.persistence.JoinColumns"/>
-<fullyQualifiedTypeName name="javax.persistence.ManyToMany"/>
-<fullyQualifiedTypeName name="java.util.Set"/>
-<fullyQualifiedTypeName name="java.sql.Date"/>
-<fullyQualifiedTypeName name="java.util.Date"/>
-<fullyQualifiedTypeName name="com.jpm.mtm.entities.Product"/>
-<fullyQualifiedTypeName name="com.jpm.mtm.entities.Order"/>
-<fullyQualifiedTypeName name="java.util.HashSet"/>
 <fullyQualifiedTypeName name="com.jpm.oto.util.JPAUtil"/>
 <fullyQualifiedTypeName name="com.jp.oto.entities.Address"/>
 <fullyQualifiedTypeName name="com.jp.oto.entities.Employee"/>
@@ -20,7 +8,6 @@
 <fullyQualifiedTypeName name="javax.persistence.CascadeType"/>
 <fullyQualifiedTypeName name="org.hibernate.annotations.GenericGenerator"/>
 <fullyQualifiedTypeName name="org.hibernate.annotations.Parameter"/>
-<fullyQualifiedTypeName name="javax.persistence.JoinColumn"/>
 <fullyQualifiedTypeName name="javax.persistence.FetchType"/>
 <fullyQualifiedTypeName name="javax.persistence.Inheritance"/>
 <fullyQualifiedTypeName name="javax.persistence.InheritanceType"/>
@@ -34,14 +21,10 @@
 <fullyQualifiedTypeName name="com.jp.inheritence.entities.SalesManager"/>
 <fullyQualifiedTypeName name="javax.persistence.DiscriminatorColumn"/>
 <fullyQualifiedTypeName name="javax.persistence.DiscriminatorValue"/>
-<fullyQualifiedTypeName name="javax.persistence.Column"/>
 <fullyQualifiedTypeName name="com.jp.hr.utilities.JPAUtil"/>
 <fullyQualifiedTypeName name="com.jp.hr.entities.Employee"/>
-<fullyQualifiedTypeName name="javax.persistence.Entity"/>
-<fullyQualifiedTypeName name="javax.persistence.Table"/>
 <fullyQualifiedTypeName name="javax.persistence.NamedQueries"/>
 <fullyQualifiedTypeName name="java.io.Serializable"/>
-<fullyQualifiedTypeName name="javax.persistence.Id"/>
 <fullyQualifiedTypeName name="java.lang.Integer"/>
 <fullyQualifiedTypeName name="java.lang.Double"/>
 <fullyQualifiedTypeName name="com.jpm.jpql.util.JPAUtil"/>
@@ -49,7 +32,6 @@
 <fullyQualifiedTypeName name="javax.persistence.EntityManager"/>
 <fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="com.jpm.jpql.dao.IBookDao"/>
-<fullyQualifiedTypeName name="java.lang.String"/>
 <fullyQualifiedTypeName name="com.jpm.jpql.services.IBookService"/>
 <fullyQualifiedTypeName name="com.jpm.jpql.services.BookService"/>
 <fullyQualifiedTypeName name="javax.persistence.Query"/>
@@ -60,4 +42,22 @@
 <fullyQualifiedTypeName name="org.slf4j.Logger"/>
 <fullyQualifiedTypeName name="org.slf4j.LoggerFactory"/>
 <fullyQualifiedTypeName name="com.jpm.jpql.dao.BookDao"/>
+<fullyQualifiedTypeName name="javax.persistence.JoinColumn"/>
+<fullyQualifiedTypeName name="javax.persistence.ManyToOne"/>
+<fullyQualifiedTypeName name="com.jpm.bank.app.entities.Customer"/>
+<fullyQualifiedTypeName name="javax.persistence.Table"/>
+<fullyQualifiedTypeName name="javax.persistence.Id"/>
+<fullyQualifiedTypeName name="java.lang.String"/>
+<fullyQualifiedTypeName name="javax.persistence.OneToMany"/>
+<fullyQualifiedTypeName name="java.util.Set"/>
+<fullyQualifiedTypeName name="javax.persistence.Entity"/>
+<fullyQualifiedTypeName name="javax.persistence.Column"/>
+<fullyQualifiedTypeName name="java.lang.Comparable"/>
+<fullyQualifiedTypeName name="java.util.Collections"/>
+<fullyQualifiedTypeName name="java.util.Comparator"/>
+<fullyQualifiedTypeName name="com.jpm.collection.entity.Employee"/>
+<fullyQualifiedTypeName name="com.jpm.bank.app.entities.Account"/>
+<fullyQualifiedTypeName name="javax.servlet.annotation.ServletSecurity"/>
+<fullyQualifiedTypeName name="javax.servlet.annotation.HttpConstraint"/>
+<fullyQualifiedTypeName name="javax.servlet.annotation.HttpMethodConstraint"/>
 </qualifiedTypeNameHistroy>

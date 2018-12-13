@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+
+
+<!-- It is schema style configuration for Spring 2.5  -->
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+                http://www.springframework.org/schema/beans
+                http://www.springframework.org/schema/beans/spring-beans.xsd">
+   
+   <bean id="serviceA" class="pack_10_ioc.pack_20_moreOnBeans.pack_07_cyclicDependency.problem1.ServiceA" >
+   		<constructor-arg ref="serviceB" />	
+   	</bean>
+   
+   <bean id="serviceB" class="pack_10_ioc.pack_20_moreOnBeans.pack_07_cyclicDependency.problem1.ServiceB" >
+   		<constructor-arg ref="serviceA" />	
+   </bean>
+</beans>

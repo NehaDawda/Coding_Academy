@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="
+                http://www.springframework.org/schema/beans
+                http://www.springframework.org/schema/beans/spring-beans.xsd
+                http://www.springframework.org/schema/util
+                http://www.springframework.org/schema/util/spring-util.xsd">
+                
+   <bean id="savingsAcc" factory-bean="myfactory"  factory-method="getNewSavingsAcc" scope="prototype">
+  		<!-- <property name="accNo" value="101" />
+  		<property name="accNm" value="Chandra" />
+  		<property name="accBal" value="40000" /> -->
+  	</bean>
+  	
+  	<bean id="currentAcc" factory-bean="myfactory"  factory-method="getNewCurrentAcc" scope="prototype">
+  		<!-- <property name="accNo" value="101" />
+  		<property name="accNm" value="Chandra" />
+  		<property name="accBal" value="40000" /> -->
+  	</bean>
+  	
+  	<bean id="myfactory" class="pack_10_ioc.pack_30_factory.pack_20_factory_pattern01.MyFactory" />
+  	
+</beans>

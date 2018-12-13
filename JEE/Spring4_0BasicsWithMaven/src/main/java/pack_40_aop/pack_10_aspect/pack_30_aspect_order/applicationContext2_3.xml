@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:lang="http://www.springframework.org/schema/lang"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd
+           http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.0.xsd
+           http://www.springframework.org/schema/lang http://www.springframework.org/schema/lang/spring-lang-2.0.xsd
+           http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.0.xsd">
+	
+	<aop:aspectj-autoproxy />
+	
+	<bean id="empDao" class="pack_40_aop.pack_10_aspect.pack_joinpoints.pack_dao.EmployeeDao" />
+	<!--  For Default-Undefined order -->
+	<!--
+		<bean class="pack_40_aop.pack_10_aspect.pack_30_aspect_order.AuthorizationAspect2" />
+		<bean class="pack_40_aop.pack_10_aspect.pack_30_aspect_order.LoggingAspect3" />
+	
+	-->
+	<!--  For defined order -->
+	
+	<bean class="pack_40_aop.pack_10_aspect.pack_30_aspect_order.AuthorizationAspect2">
+		<property name="order" value="200"></property>
+	</bean>
+
+	<bean class="pack_40_aop.pack_10_aspect.pack_30_aspect_order.LoggingAspect3">
+		<property name="order" value="300"></property>
+	</bean>
+	
+</beans>

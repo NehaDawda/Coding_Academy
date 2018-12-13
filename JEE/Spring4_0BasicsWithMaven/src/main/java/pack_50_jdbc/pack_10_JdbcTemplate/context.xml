@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+ 
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="
+                http://www.springframework.org/schema/beans
+                http://www.springframework.org/schema/beans/spring-beans.xsd
+                http://www.springframework.org/schema/util
+                http://www.springframework.org/schema/util/spring-util.xsd"> 
+
+	<import resource="..\pack_common\db-config.xml"/>
+	
+   <bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
+   		<property name="dataSource" ref="ds" />
+   </bean>
+   
+   <bean id="namedParaJdbcTemplate" class="org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate">
+   		<!-- It does not have property to set DataSource.  It has a constructor -->
+   		<constructor-arg ref="ds" />
+   </bean>
+   
+   <!-- <bean id="emp_simpleJdbcTemplate" class="org.springframework.jdbc.core.simple.SimpleJdbcTemplate"> -->
+   <bean id="emp_simpleJdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
+   	<!-- It does not have property to set DataSource.  It has a constructor -->
+   	<constructor-arg>
+   			<ref bean="ds"/>
+   	</constructor-arg>
+   </bean>
+   
+	<!-- 
+	<bean id="my_data_source"
+		class="org.springframework.jdbc.datasource.DriverManagerDataSource"> 
+		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
+		<property name="url" value="jdbc:mysql://localhost:3306/test" />
+		<property name="username" value="root" />
+		<property name="password" value="root" />
+	</bean>
+	-->
+</beans>

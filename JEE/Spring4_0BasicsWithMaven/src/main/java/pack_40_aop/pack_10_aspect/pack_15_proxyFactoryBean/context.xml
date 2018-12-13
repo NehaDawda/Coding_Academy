@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:lang="http://www.springframework.org/schema/lang"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd
+           http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.0.xsd
+           http://www.springframework.org/schema/lang http://www.springframework.org/schema/lang/spring-lang-2.0.xsd
+           http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.0.xsd">
+	
+	<!-- Step I -->
+	<bean id="proxyCustomerService" class= "org.springframework.aop.framework.ProxyFactoryBean">
+		<property name="interceptorNames"> <!--  Interchange order of advices by changing order of advices in list -->
+			<list>
+				<value>authorizationInterceptor</value>
+				<value>loggingInterceptor</value>
+			</list>
+		</property>
+		<property name="target" ref="customerService"/>
+		<property name="interfaces">
+			<value>pack_40_aop.pack_10_aspect.pack_joinpoints.pack_cust.CustomerService</value>
+		</property>
+	</bean>
+	
+	<bean id="loggingInterceptor" class="pack_40_aop.pack_10_aspect.pack_15_proxyFactoryBean.LoggingAspect0" />
+	<bean id="authorizationInterceptor" class="pack_40_aop.pack_10_aspect.pack_15_proxyFactoryBean.AuthorizationAspect0"/>
+		
+	
+	<bean id="customerService" class="pack_40_aop.pack_10_aspect.pack_joinpoints.pack_cust.CustomerServiceImpl" />
+	<bean id="bussService" class="pack_40_aop.pack_10_aspect.pack_joinpoints.pack_buss.BusinessComponent" />
+</beans>

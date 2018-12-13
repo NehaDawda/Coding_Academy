@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+
+
+<!-- It is schema style configuration for Spring 2.5  -->
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+                http://www.springframework.org/schema/beans
+                http://www.springframework.org/schema/beans/spring-beans.xsd">
+   
+   <bean id="cartBean" class="pack_10_ioc.pack_10_beanBasics.pack02_context.CustomerCart" scope="prototype" />
+   
+   <bean id="resourceBean2" class="pack_10_ioc.pack_10_beanBasics.pack02_context.GlobalInvestment">
+	<!--  Specifying two para constructor for object initialization-->
+    	<constructor-arg type="String">
+   			<value>Gobal Investment Pvt. Ltd.</value>
+   		</constructor-arg>
+   		<constructor-arg type="String" >
+   			<value>Ladder of success</value>
+   		</constructor-arg>
+   		
+   		<property name="globalRank"> 
+   			<value>104</value>
+   		</property>
+   		
+		<!-- Setter Injection    -->
+   		<property name="headOfficeAddress" ref="address"/>
+   		
+   </bean>
+   
+   <bean id="address"
+   		class="pack_10_ioc.pack_10_beanBasics.pack02_context.Address">
+	
+	   	<property name="line1">
+	   		<value>207, Lok Center</value>
+	   	</property>
+	   	<property name="line2">
+	   		<value>Marol</value>
+	   	</property>
+	   	<property name="city">
+	   		<value>Andheri(E), Mumbai</value>
+	   	</property>
+	   	<property name="state">
+	   		<value>Maharashtra</value>
+	   	</property>
+	   	<property name="pin">
+	   		<value>400057</value>
+	   	</property>
+	</bean>
+</beans>

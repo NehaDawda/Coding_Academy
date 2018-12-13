@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+
+
+<!-- It is schema style configuration for Spring 2.5  -->
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+                http://www.springframework.org/schema/beans
+                http://www.springframework.org/schema/beans/spring-beans.xsd">
+   
+   <bean id="report" class="pack_10_ioc.pack_50_exprLanguage.el010withXml.Report">
+	<!--  Specifying two para constructor for object initialization-->
+    	<constructor-arg type="String">
+   			<value>="#{resourceBean.firmName}"</value>
+   		</constructor-arg>
+   		<constructor-arg type="String" >
+   			<value>"#{resourceBean.companyMotto}"</value>
+   		</constructor-arg>
+   		
+   		<property name="calcResult" value="#{resourceBean.calculatedResult()}" />
+   		<property name="mapElement" value="#{resourceBean.branches['Mumbai']}" />
+   		<property name="setElement" value="#{resourceBean.directorsPanel[0]}" />
+   		<property name="listElement" value="#{resourceBean.contactDetails[0]}" />
+   		
+   		<property name="city" value="#{resourceBean.headOfficeAddress.city}" />
+   	</bean>
+   
+   <bean id="resourceBean" class="pack_10_ioc.pack_50_exprLanguage.el010withXml.GlobalInvestment">
+	<!--  Specifying two para constructor for object initialization-->
+    	<constructor-arg type="String">
+   			<value>Gobal Investment Pvt. Ltd.</value>
+   		</constructor-arg>
+   		<constructor-arg type="String" >
+   			<value>Ladder of success</value>
+   		</constructor-arg>
+   		
+   		<property name="directorsPanel">
+			<set>
+				<value>Mr. Malhotra</value>
+				<value>Mr. Gihrotra</value>
+				<value>Mr. Sanmitra</value>
+			</set>
+		</property>
+		
+		<property name="contactDetails">
+			<list>
+				<value>Landline:022 3089 1000(100 Lines)</value>
+				<value>Mobile: 9223912345</value>
+				<value>Fax: 022 3090 1234</value>
+			</list>
+		</property>
+		
+		<property name="branches">
+			<map> 
+				<entry key="Mumbai">
+					<value>Shop 123, Lane 6, Subhash Road</value>
+				</entry>
+				<entry key="Delhi">
+					<value>Shop 234, Shoper's Stop, Link Road</value>
+				</entry>
+				<entry key="Kolkata">
+					<value>Teen Hath Naka, Cross Road 2</value>
+				</entry>
+			</map>
+		</property>
+		
+		<property name="headOfficeAddress" ref="address" />
+   </bean>
+   
+   <bean id="address" class="pack_10_ioc.pack_50_exprLanguage.el010withXml.Address">
+	   	<property name="line1">
+	   		<value>207, Lok Center</value>
+	   	</property>
+	   	<property name="line2">
+	   		<value>Marol</value>
+	   	</property>
+	   	<property name="city">
+	   		<value>Andheri(E), Mumbai</value>
+	   	</property>
+	   	<property name="state">
+	   		<value>Maharashtra</value>
+	   	</property>
+	   	<property name="pin">
+	   		<value>400057</value>
+	   	</property>
+	</bean>
+	
+</beans>

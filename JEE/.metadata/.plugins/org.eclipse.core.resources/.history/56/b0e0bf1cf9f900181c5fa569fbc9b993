@@ -1,0 +1,5 @@
+package com.jpm.bank.app.daos;
+
+public interface IAccountDao {
+
+}

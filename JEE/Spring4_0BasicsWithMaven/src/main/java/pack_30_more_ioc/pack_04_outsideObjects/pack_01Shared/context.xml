@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+
+
+<!-- It is schema style configuration for Spring 2.5  -->
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+                http://www.springframework.org/schema/beans
+                http://www.springframework.org/schema/beans/spring-beans.xsd">
+   
+   <bean id="services" abstract="true" >
+		<property name="globalInvestment" ref="globalInvestment" />
+		<property name="name" value="service-Name" />
+   </bean>
+   
+   <bean id="services1" abstract="true" >
+		<property name="globalInvestment" ref="globalInvestment" />
+		<property name="name" value="service1-Name" />
+   </bean>
+   
+   <bean id="services2" abstract="true" >
+		<property name="name" value="service2-Name" />
+   </bean>
+   
+   <bean id="globalInvestment" class="pack_30_more_ioc.pack_04_outsideObjects.pack_01Shared.GlobalInvestment">
+	<!--  Specifying two para constructor for object initialization-->
+    	<constructor-arg type="String">
+   			<value>Gobal Investment Pvt. Ltd.</value>
+   		</constructor-arg>
+   		<constructor-arg type="String" >
+   			<value>Ladder of success</value>
+   		</constructor-arg>
+   		
+   		<property name="globalRank"> 
+   			<value>104</value>
+   		</property>
+   		
+   		
+   		<property name="headOfDirectors"> 
+   			<value>Mr. Swarupsingh Ranawat</value>
+   		</property>
+   		
+   		<property name="directorsPanel">
+			<set>
+				<value>Mr. Malhotra</value>
+				<value>Mr. Gihrotra</value>
+				<value>Mr. Sanmitra</value>
+			</set>
+		</property>
+		
+		<property name="contactDetails">
+			<list>
+				<value>Landline:022 3089 1000(100 Lines)</value>
+				<value>Mobile: 9223912345</value>
+				<value>Fax: 022 3090 1234</value>
+			</list>
+		</property>
+		
+		<property name="branches">
+			<map> 
+				<entry key="Mumbai">
+					<value>Shop 123, Lane 6, Subhash Road</value>
+				</entry>
+				<entry key="Delhi">
+					<value>Shop 234, Shoper's Stop, Link Road</value>
+				</entry>
+				<entry key="Kolkata">
+					<value>Teen Hath Naka, Cross Road 2</value>
+				</entry>
+			</map>
+		</property>
+		
+		<property name="branchManagers">
+			<props>
+				<prop key="Mumbai">Mr. Jagtap</prop>
+				<prop key="Delhi">Mr. Bhupendra Singh</prop>
+				<prop key="Kolkata">Mr. Pranav Basu</prop>
+			</props>
+		</property>
+		
+		<!-- Setter Injection    -->
+   		<property name="headOfficeAddress" ref="address"/>
+   		
+   		<property name="serverIps" ref="IpsConfig" />
+   </bean>
+   
+   <bean id="address"
+   		class="pack_30_more_ioc.pack_04_outsideObjects.pack_01Shared.Address">
+	
+	   	<property name="line1">
+	   		<value>207, Lok Center</value>
+	   	</property>
+	   	<property name="line2">
+	   		<value>Marol</value>
+	   	</property>
+	   	<property name="city">
+	   		<value>Andheri(E), Mumbai</value>
+	   	</property>
+	   	<property name="state">
+	   		<value>Maharashtra</value>
+	   	</property>
+	   	<property name="pin">
+	   		<value>400057</value>
+	   	</property>
+	</bean>
+	
+	<bean id="IpsConfig" class="org.springframework.beans.factory.config.PropertiesFactoryBean">
+	<!--  This is property class builder -->
+	  <property name="location" value="pack_30_more_ioc\pack_04_outsideObjects\pack_01Shared\server.properties"/>
+	</bean>
+</beans>

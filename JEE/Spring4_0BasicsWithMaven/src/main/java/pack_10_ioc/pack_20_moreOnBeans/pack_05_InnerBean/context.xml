@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+
+<!-- It is schema style configuration for Spring 2.5  -->
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+                http://www.springframework.org/schema/beans
+                http://www.springframework.org/schema/beans/spring-beans.xsd" > 
+
+   <!-- Normal dependency set 
+   <bean id="bean" class="pack_10_ioc.pack_20_moreOnBeans.pack_05_InnerBean.GlobalInvestment">
+    	<constructor-arg ref="address" />
+   		
+   		<property name="address" ref="address"/>
+   </bean> 
+  <bean id="address" class="pack_10_ioc.pack_20_moreOnBeans.pack_05_InnerBean.Address">
+	   	<property name="line1">
+	   		<value>207, Lok Center</value>
+	   	</property>
+	   	<property name="city">
+	   		<value>Andheri(E), Mumbai</value>
+	   	</property>
+	</bean>
+	-->
+	
+   <!-- Inner dependency set through constructor  
+    <bean id="bean" class="pack_10_ioc.pack_20_moreOnBeans.pack_05_InnerBean.GlobalInvestment">
+    	<constructor-arg>
+    		<bean id="address" class="pack_10_ioc.pack_20_moreOnBeans.pack_05_InnerBean.Address">
+			   	<property name="line1">
+			   		<value>207, Lok Center</value>
+			   	</property>
+			   	<property name="city">
+			   		<value>Andheri(E), Mumbai</value>
+			   	</property>
+			</bean>
+    	</constructor-arg>
+   </bean>
+   -->
+   <!-- Inner dependency set through property -->
+   <bean id="bean" class="pack_10_ioc.pack_20_moreOnBeans.pack_05_InnerBean.GlobalInvestment">
+   		<property name="address">
+   			<bean id="address" class="pack_10_ioc.pack_20_moreOnBeans.pack_05_InnerBean.Address">
+			   	<property name="line1">
+			   		<value>207, Lok Center</value>
+			   	</property>
+			   	<property name="city">
+			   		<value>Andheri(E), Mumbai</value>
+			   	</property>
+			</bean>
+		</property>
+	</bean>
+	 
+</beans>

@@ -30,11 +30,13 @@
   examples web application, do not forget to remove the <!.. ..> that surrounds
   them. You will also need to set the passwords to something appropriate.
 -->
-<!--
+<!-- step 1> defone roles -->
   <role rolename="tomcat"/>
   <role rolename="role1"/>
-  <user username="tomcat" password="<must-be-changed>" roles="tomcat"/>
-  <user username="both" password="<must-be-changed>" roles="tomcat,role1"/>
-  <user username="role1" password="<must-be-changed>" roles="role1"/>
--->
+<!--  step 2> define username and password -->
+  <user username="tomcat" password="tomcat" roles="tomcat"/>
+<!--  step 3> assign roles attribute to the user -->
+  <user username="both" password="tomcat" roles="tomcat,role1"/>
+  <user username="role1" password="tomcat" roles="role1"/>
+
 </tomcat-users>

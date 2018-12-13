@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+
+
+<!-- It is schema style configuration for Spring 2.5  -->
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+                http://www.springframework.org/schema/beans
+                http://www.springframework.org/schema/beans/spring-beans.xsd">
+                
+   <import resource="ContextDB.xml"/>
+   
+   <bean id="resourceBean" class="pack_10_ioc.pack_20_moreOnBeans.pack_04_autowiring.pack_20_wireXml.GlobalInvestment" />
+  
+   <bean id="empList"     class="pack_10_ioc.pack_20_moreOnBeans.pack_04_autowiring.pack_20_wireXml.EmpDao"  autowire="byName" > <!-- autowire="byType" autowire="byName"  autowire="constructor"-->
+	
+	   	<!-- <property
+	   		name="dataSource"
+	   		ref="dataSource">
+	   	</property>
+	   	
+	   	<property
+	   		name="resourceBean"
+	   		ref="resourceBean">
+	   	</property> -->
+	  
+   </bean>
+   
+</beans>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+
+
+<!-- It is schema style configuration for Spring 2.5  -->
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.1.xsd">
+   
+   <bean id="resourceBean" class="pack_10_ioc.pack_20_moreOnBeans.pack_00_constructor.GlobalInvestment">
+		<!-- Constructor with two string parameters
+    	<constructor-arg>
+   			<value>Gobal Investment Pvt. Ltd.</value>
+   		</constructor-arg>
+   		<constructor-arg>
+   			<value>Ladder of success</value>
+   		</constructor-arg>
+   		 -->
+   		 
+   		<!-- Constructor with two string parameters 
+    	<constructor-arg value="Gobal Investment Pvt. Ltd." />
+   		<constructor-arg value="Ladder of success" />
+   		-->
+   			
+   		<!-- Constructor configuration as per order set by 'index'
+   		<constructor-arg index="1">
+   			<value>Ladder of success</value>
+   		</constructor-arg>
+   		<constructor-arg index="0">
+   			<value>Gobal Investment Pvt. Ltd.</value>
+   		</constructor-arg>
+   		 -->
+   		 
+   		<!-- Constructor configuration as per order set by 'name'
+   		<constructor-arg name="companyMotto">
+   			<value>Ladder of success</value>
+   		</constructor-arg>
+   		<constructor-arg name="firmName">
+   			<value>Gobal Investment Pvt. Ltd.</value>
+   		</constructor-arg>
+   		-->
+   		
+   		<constructor-arg type="String" name="firmName" index="0" value="Gobal Investment Pvt. Ltd." />
+   		<constructor-arg type="String" value="Ladder of success" />
+   		<constructor-arg type="int" value="104" />
+   		<constructor-arg type="Address" ref="address" />
+   </bean>
+   
+   <bean id="address" class="pack_10_ioc.pack_20_moreOnBeans.pack_00_constructor.Address">
+	
+	   	<property name="line1">
+	   		<value>207, Lok Center</value>
+	   	</property>
+	   	<property name="line2">
+	   		<value>Marol</value>
+	   	</property>
+	   	<property name="city">
+	   		<value>Andheri(E), Mumbai</value>
+	   	</property>
+	   	<property name="state">
+	   		<value>Maharashtra</value>
+	   	</property>
+	   	<property name="pin">
+	   		<value>400057</value>
+	   	</property>
+	</bean>
+	
+</beans>
