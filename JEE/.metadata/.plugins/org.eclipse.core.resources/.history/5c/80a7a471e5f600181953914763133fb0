@@ -1,8 +1,0 @@
-package com.jp.shopping.dao;
-
-import com.jp.shopping.entities.Order;
-import com.jp.shopping.exception.ShoppingException;
-
-public interface DaoOrder {
-	public boolean insertNewProduct(Order order) throws ShoppingException;
-}

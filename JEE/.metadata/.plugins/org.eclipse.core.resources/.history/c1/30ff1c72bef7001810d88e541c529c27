@@ -1,8 +1,0 @@
-package com.jpm.jpacrud.service;
-
-import com.jpm.jpacrud.entities.Employee;
-import com.jpm.jpacrud.exception.EmployeeException;
-
-public interface IEmployeeService {
-	public Long addEmployee(Employee employee) throws EmployeeException;
-}

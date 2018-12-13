@@ -1,8 +1,0 @@
-package com.jpm.jpacrud.doa;
-
-import com.jpm.jpacrud.entities.Employee;
-import com.jpm.jpacrud.exception.EmployeeException;
-
-public interface IEmployeeDao {
-	public Long addEmployee(Employee employee) throws EmployeeException;
-}

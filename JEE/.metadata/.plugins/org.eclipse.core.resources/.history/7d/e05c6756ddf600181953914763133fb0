@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
-    <wb-module deploy-name="OnlineShopping_JP_NehaDawda">
-        <wb-resource deploy-path="/" source-path="/WebContent"/>
-        <property name="context-root" value="OnlineShopping_JP_NehaDawda"/>
-        <property name="java-output-path" value="/OnlineShopping_JP_NehaDawda/build/classes"/>
-    </wb-module>
-</project-modules>

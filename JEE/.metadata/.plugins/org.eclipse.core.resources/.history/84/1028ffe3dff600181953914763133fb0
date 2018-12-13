@@ -1,5 +1,0 @@
-package com.jp.shopping.dao;
-
-public interface Item {
-
-}

@@ -1,5 +1,0 @@
-package com.jpm.jpacrud.doa;
-
-public interface IEmployeeDao {
-
-}

@@ -1,5 +1,0 @@
-package com.jp.shopping.services;
-
-public interface ServiceOrder {
-
-}
