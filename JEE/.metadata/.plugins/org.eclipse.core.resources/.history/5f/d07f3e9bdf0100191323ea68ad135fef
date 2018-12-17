@@ -1,0 +1,5 @@
+package com.jp.fin.exceptions;
+
+public class FinException extends Exception {
+
+}

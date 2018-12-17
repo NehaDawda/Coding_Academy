@@ -1,0 +1,10 @@
+package com.jp.fin.test;
+
+import com.jp.fin.exceptions.FinException;
+import com.jp.fin.services.FinancialServices;
+
+public class TestFinServices {
+	public static void main(String[] args) {
+		FinancialServices services = new FinancialServicesImpl(); 
+	}	
+}

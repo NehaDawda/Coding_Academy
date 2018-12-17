@@ -1,0 +1,10 @@
+package com.jp.hr.soap;
+
+public class PublishEmpServices {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

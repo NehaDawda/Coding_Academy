@@ -1,0 +1,13 @@
+package com.jp.fin.services;
+
+import com.jp.fin.exceptions.FinException;
+
+public class FinancialServiceImpl implements FinancialServices {
+
+	@Override
+	public int getEmpCount() throws FinException {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}
