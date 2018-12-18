@@ -1,9 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="com.jpm.oto.util.JPAUtil"/>
-<fullyQualifiedTypeName name="com.jp.oto.entities.Address"/>
-<fullyQualifiedTypeName name="com.jp.oto.entities.Employee"/>
-<fullyQualifiedTypeName name="javax.persistence.OneToOne"/>
 <fullyQualifiedTypeName name="javax.persistence.PrimaryKeyJoinColumn"/>
 <fullyQualifiedTypeName name="javax.persistence.CascadeType"/>
 <fullyQualifiedTypeName name="org.hibernate.annotations.GenericGenerator"/>
@@ -60,4 +56,8 @@
 <fullyQualifiedTypeName name="javax.servlet.annotation.ServletSecurity"/>
 <fullyQualifiedTypeName name="javax.servlet.annotation.HttpConstraint"/>
 <fullyQualifiedTypeName name="javax.servlet.annotation.HttpMethodConstraint"/>
+<fullyQualifiedTypeName name="com.jp.hr.services.ServiceEmployeeImpl"/>
+<fullyQualifiedTypeName name="com.jp.hr.services.ServiceEmployee"/>
+<fullyQualifiedTypeName name="com.jp.hr.utilities.ServiceFactory"/>
+<fullyQualifiedTypeName name="com.jp.hr.updateInterfaces.EmpSoapServicesUpdate"/>
 </qualifiedTypeNameHistroy>

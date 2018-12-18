@@ -1,7 +1,0 @@
-package com.jpm.bank.app.entities;
-
-public class Account {
-	private Long accountId;
-	private double balance;
-
-}

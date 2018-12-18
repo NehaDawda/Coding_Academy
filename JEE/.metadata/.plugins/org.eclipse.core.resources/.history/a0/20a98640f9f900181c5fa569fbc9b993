@@ -1,5 +1,0 @@
-package com.jpm.bank.app.exception;
-
-public class AccountException extends Exception {
-
-}

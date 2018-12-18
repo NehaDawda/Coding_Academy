@@ -1,9 +1,0 @@
-package com.jpm.bank.app.entities;
-
-import javax.persistence.DiscriminatorValue;
-
-@Entity
-@DiscriminatorValue(value="SAVING_ACCOUNT")
-public class SavingAccount {
-	private float rateOfInterest;
-}

@@ -1,0 +1,22 @@
+package com.jp.hr.controller;
+
+import java.util.ArrayList;
+
+import com.jp.hr.entities.Employee;
+import com.jp.hr.exceptions.HrException;
+import com.jp.hr.services.ServiceEmployee;
+import com.jp.hr.utilities.ServiceFactory;
+
+public class HrRestServices {
+
+	private ServiceEmployee services;
+	
+	public HrRestServices() {
+		services = ServiceFactory.getService();
+	}
+	
+	public ArrayList<Employee> getEmpList() throws HrException{
+		ArrayList<Employee> empList = services.getEmpList();
+		return empList;
+	}
+}
