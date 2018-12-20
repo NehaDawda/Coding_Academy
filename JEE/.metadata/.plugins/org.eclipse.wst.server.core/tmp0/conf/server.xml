@@ -151,7 +151,7 @@
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log" suffix=".txt"/>
 
       
-      <Context docBase="C:\Users\Administrator\Documents\GitHub\Coding_Academy\JEE\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\ROOT" path="" reloadable="false"/><Context docBase="C:\Users\Administrator\Documents\GitHub\Coding_Academy\JEE\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\GladiatorSessionManagement" path="/GSManagement" reloadable="true" source="org.eclipse.jst.jee.server:GladiatorSessionManagement"/></Host>
+      <Context docBase="C:\Users\Administrator\Documents\GitHub\Coding_Academy\JEE\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\ROOT" path="" reloadable="false"/><Context docBase="C:\Users\Administrator\Documents\GitHub\Coding_Academy\JEE\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\Spring130_MVC_JPA" path="/Spring130_MVC_JPA" reloadable="true" source="org.eclipse.jst.jee.server:Spring130_MVC_JPA"/><Context docBase="C:\Users\Administrator\Documents\GitHub\Coding_Academy\JEE\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\Spring_300_MvcJpaRestNg" path="/Spring_300_MvcJpaRestNg" reloadable="true" source="org.eclipse.jst.jee.server:Spring_300_MvcJpaRestNg"/></Host>
     </Engine>
   </Service>
 </Server>

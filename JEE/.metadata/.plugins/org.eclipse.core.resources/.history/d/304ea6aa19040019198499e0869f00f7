@@ -1,0 +1,8 @@
+package com.jp.hr.entities;
+
+public class Project {
+	private int projectId;
+	private String title;
+	
+	
+}

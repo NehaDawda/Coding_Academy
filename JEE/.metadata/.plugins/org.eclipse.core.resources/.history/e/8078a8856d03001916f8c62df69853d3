@@ -1,0 +1,18 @@
+package com.example.demo;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+//this annotation informs that it is a spring boot application
+@SpringBootApplication
+public class DemoApplication {
+
+	public static void main(String[] args) {
+		/*static run method provided by SpringApplication class
+		 * which accepts 2 arguments
+		*/
+		SpringApplication.run(DemoApplication.class, args);
+	}
+
+}
+
