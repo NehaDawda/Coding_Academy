@@ -1,0 +1,99 @@
+<beans:beans xmlns="http://www.springframework.org/schema/security"
+	xmlns:beans="http://www.springframework.org/schema/beans" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+	http://www.springframework.org/schema/security
+	http://www.springframework.org/schema/security/spring-security-3.2.xsd">
+ 
+	<http auto-config="true">
+		<intercept-url pattern="/admin**" access="ROLE_USER" />
+		
+		<form-login 
+		    login-page="/login"
+		    
+		    authentication-failure-url="/login?error" 
+			username-parameter="username"
+			password-parameter="password"
+		     /> 
+		<!-- Making login page accessible to anonymous user and setting default post login-page.
+		<intercept-url pattern="/login.htm" access="IS_AUTHENTICATED_ANONYMOUSLY"/>
+		<form-login login-page='/login.htm' 
+			default-target-url='/home.htm'
+ 			always-use-default-target='true' />
+		 -->
+		<logout logout-success-url="/login?logout" />
+	</http>
+ 
+	<authentication-manager>
+	  <authentication-provider>
+	    <user-service>
+			<user name="chandra" password="123" authorities="ROLE_USER" />
+			<user name="aa" password="aa" authorities="ROLE_USER" />
+	    </user-service>
+	  </authentication-provider>
+	</authentication-manager>
+ 
+ 	<!-- Using authentication provider. Here, bean 'myUserDetailsService' bean is of type UserDetailsService
+ 	<authentication-manager>
+		<authentication-provider user-service-ref='myUserDetailsService'/>
+	</authentication-manager>
+ 	-->
+ 	
+ 	<!-- Using spring data source to pull the data.
+ 	<authentication-manager>
+		<jdbc-user-service data-source-ref="securityDataSource"/>
+	<authentication-manager>
+ 	-->
+ 	
+ 	<!-- Adding SHA Encoder.
+ 	<authentication-manager>
+	  <authentication-provider>
+	    <password-encoder hash="sha"/>
+	    <user-service>
+	      <user name="jimi" password="d7e6351eaa13189a5a3641bab846c8e8c69ba39f"
+	            authorities="ROLE_USER, ROLE_ADMIN" />
+	      <user name="bob" password="4e7421b1b8765d8f9406d87e7cc6aa784c4ab97f"
+	            authorities="ROLE_USER" />
+	    </user-service>
+	  </authentication-provider>
+	</authentication-manager>
+ 	-->
+ 	
+	<!-- Adding HTTPS channel security and defining non-standard ports for HTTP/HTTPS.
+	<http>
+		<intercept-url pattern="/secure/**" access="ROLE_USER" requires-channel="https"/>
+    	<intercept-url pattern="/**" access="ROLE_USER" requires-channel="any"/>
+	
+		<port-mappings>
+      		<port-mapping http="9080" https="9443"/>
+    		</port-mappings>
+		</port-mappings>
+	</http>	
+	-->
+	
+	<!-- Detecting timouts and killing JSESSIONID on logout 
+		<http>
+    		<session-management invalid-session-url="/invalidSession.htm" />
+		</http>
+		<logout delete-cookies="JSESSIONID" />
+	 -->
+	 
+	 <!-- Controlling concurrent sessions.
+	 	<http>
+		    <session-management>
+		        <concurrency-control max-sessions="1" error-if-maximum-exceeded="true" expired-url="/login?time=1"/>
+		    </session-management>
+		</http>
+	  -->
+	  <!-- Defining custom interceptor
+	  	<http>
+     		<custom-filter position="FORM_LOGIN_FILTER" ref="myFilter" />
+  		</http>
+  		<beans:bean id="myFilter" class="com.mycompany.MySpecialAuthenticationFilter"/>
+	   -->
+  
+	  <!-- Enabling method level security 
+	  	<global-method-security secured-annotations="enabled" />
+	   -->
+</beans:beans>
