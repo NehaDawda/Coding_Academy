@@ -151,7 +151,7 @@
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log" suffix=".txt"/>
 
       
-      <Context docBase="Spring130_MVC_JPA" path="/Spring130_MVC_JPA" reloadable="true" source="org.eclipse.jst.jee.server:Spring130_MVC_JPA"/><Context docBase="Spring_300_MvcJpaRestNg" path="/Spring_300_MvcJpaRestNg" reloadable="true" source="org.eclipse.jst.jee.server:Spring_300_MvcJpaRestNg"/></Host>
+      <Context docBase="Spring310_MvcInterceptor" path="/Spring310_MvcInterceptor" reloadable="true" source="org.eclipse.jst.jee.server:Spring310_MvcInterceptor"/></Host>
     </Engine>
   </Service>
 </Server>

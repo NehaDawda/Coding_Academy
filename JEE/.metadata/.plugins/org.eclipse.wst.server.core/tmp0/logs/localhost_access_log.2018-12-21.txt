@@ -1,0 +1,10 @@
+127.0.0.1 - - [21/Dec/2018:13:53:17 +0530] "GET / HTTP/1.1" 404 1074
+0:0:0:0:0:0:0:1 - - [21/Dec/2018:13:53:31 +0530] "GET /Spring310_MvcInterceptor/ HTTP/1.1" 200 711
+0:0:0:0:0:0:0:1 - - [21/Dec/2018:13:53:32 +0530] "GET /Spring310_MvcInterceptor/getEmpList.hr HTTP/1.1" 500 4801
+127.0.0.1 - - [21/Dec/2018:13:58:20 +0530] "GET / HTTP/1.1" 404 1074
+0:0:0:0:0:0:0:1 - - [21/Dec/2018:13:58:29 +0530] "GET /Spring310_MvcInterceptor/getEmpList.hr HTTP/1.1" 200 13522
+0:0:0:0:0:0:0:1 - - [21/Dec/2018:13:58:31 +0530] "GET /Spring310_MvcInterceptor/empDetails.hr?id=100 HTTP/1.1" 200 860
+0:0:0:0:0:0:0:1 - - [21/Dec/2018:13:58:32 +0530] "GET /Spring310_MvcInterceptor/getEmpList.hr HTTP/1.1" 200 13522
+0:0:0:0:0:0:0:1 - - [21/Dec/2018:13:58:38 +0530] "GET /Spring310_MvcInterceptor/homePage.hr HTTP/1.1" 200 711
+0:0:0:0:0:0:0:1 - - [21/Dec/2018:14:01:52 +0530] "GET /Spring310_MvcInterceptor/getEmpList.hr HTTP/1.1" 200 13522
+0:0:0:0:0:0:0:1 - - [21/Dec/2018:14:01:59 +0530] "GET /Spring310_MvcInterceptor/empDetails.hr?id=194 HTTP/1.1" 200 862
