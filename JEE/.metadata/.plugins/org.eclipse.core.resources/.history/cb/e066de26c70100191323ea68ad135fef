@@ -1,5 +1,0 @@
-package com.jp.hr.interfaces;
-
-public interface EmpSoapServices {
-
-}

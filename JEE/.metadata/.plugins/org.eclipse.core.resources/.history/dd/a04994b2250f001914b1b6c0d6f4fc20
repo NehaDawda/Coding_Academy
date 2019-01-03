@@ -1,0 +1,5 @@
+package com.jpm.hr.services;
+
+public interface HrServices {
+
+}

@@ -1,0 +1,17 @@
+package com.jpm.hr.daos;
+
+import org.springframework.stereotype.Repository;
+
+import com.jpm.hr.entities.Employee;
+import com.jpm.hr.exceptions.HrException;
+
+@Repository
+public class HrDaosImpl implements HrDaos {
+
+	@Override
+	public Employee getEmpDetails(int empNo) throws HrException {
+		Employee emp = new Employee(1,"aaa",80000.0f);
+		return emp;
+	}
+
+}

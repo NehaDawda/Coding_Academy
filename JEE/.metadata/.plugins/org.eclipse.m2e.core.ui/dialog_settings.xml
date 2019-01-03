@@ -2,12 +2,16 @@
 <section name="Workbench">
 	<section name="MavenProjectWizardArtifactPage">
 		<list key="groupId">
+			<item value="com.jp.hr"/>
+			<item value="com.jpm.hr"/>
 			<item value="com.jpm.boot"/>
 			<item value="com.jpm.jpa"/>
 		</list>
 		<list key="name">
 		</list>
 		<list key="artifactId">
+			<item value="Spring400_BasicAuth"/>
+			<item value="SpringBoot060_hr"/>
 			<item value="SrringBootHelloWorld"/>
 			<item value="JPM_140_SimpleMavenProject"/>
 		</list>
@@ -21,6 +25,7 @@
 		</list>
 		<list key="version">
 			<item value="0.0.1-SNAPSHOT"/>
+			<item value="ver01"/>
 		</list>
 	</section>
 	<section name="org.eclipse.m2e.core.pom.dependencies">
@@ -73,6 +78,7 @@
 	</section>
 	<section name="MavenProjectWizardLocationPage">
 		<list key="location">
+			<item value="C:\Users\Administrator\Documents\GitHub\Coding_Academy\JEE\JPM_132_JPACRUD\src\com\jpm\jpacrud\dao\EmployeeDao.java"/>
 			<item value="C:\Users\Administrator\Downloads\demo\demo\src\main\java\com\example\demo\DemoApplication.java"/>
 		</list>
 		<list key="projectNameTemplate">

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.eclipse.jdt.launching.localJavaApplication">
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
+<listEntry value="/SpringBoot035_MvcTodolist/src/main/java/com/jpm/mvc/start/StartAppl.java"/>
+</listAttribute>
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
+<listEntry value="1"/>
+</listAttribute>
+<stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="com.jpm.mvc.start.StartAppl"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="SpringBoot035_MvcTodolist"/>
+</launchConfiguration>

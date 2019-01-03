@@ -1,0 +1,17 @@
+package com.jpm.hr.start;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.domain.EntityScan;
+import org.springframework.context.annotation.ComponentScan;
+
+// http://localhost:8082/home
+@SpringBootApplication
+@ComponentScan("com.jpm.hr.daos, com.jpm.hr.services, com.jpm.hr.controller")
+@EntityScan("com.jpm.hr.entities")
+public class ApplStart {
+
+	public static void main(String[] args){
+		SpringApplication.run(ApplStart.class, args);
+	}
+}

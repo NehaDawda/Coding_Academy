@@ -1,0 +1,5 @@
+package com.jpm.hr.daos;
+
+public class HrDaosImpl implements HrDaos {
+
+}

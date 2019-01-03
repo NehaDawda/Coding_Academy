@@ -1,0 +1,7 @@
+package com.jpm.hr.daos;
+
+import com.jpm.hr.entities.Employee;
+
+public interface HrDaos {
+	public Employee getEmpDetails(int empNo);
+}

@@ -1,0 +1,5 @@
+package com.jpm.hr.daos;
+
+public interface HrDaos {
+	public Employee getEmpDetails(int empNo);
+}

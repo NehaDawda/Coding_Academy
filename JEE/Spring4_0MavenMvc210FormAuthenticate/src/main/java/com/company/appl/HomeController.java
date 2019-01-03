@@ -14,11 +14,11 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 /**
- * Home page: http://localhost:8081/Spring4_0MavenMvc210FormAuthenticate/
- * Admin page: http://localhost:8081/Spring4_0MavenMvc210FormAuthenticate/admin
+ * Home page: http://localhost:8080/Spring4_0MavenMvc210FormAuthenticate/
+ * Admin page: http://localhost:8080/Spring4_0MavenMvc210FormAuthenticate/admin
  * 
  * Try after logout:
- * 	http://localhost:8081/Spring4_0MavenMvc210FormAuthenticate/admin/innerPage
+ * 	http://localhost:8080/Spring4_0MavenMvc210FormAuthenticate/admin/innerPage
  */
 @Controller
 public class HomeController {

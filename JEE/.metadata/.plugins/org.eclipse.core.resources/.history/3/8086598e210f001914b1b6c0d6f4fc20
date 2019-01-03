@@ -1,0 +1,8 @@
+server.port=8082
+#spring.datasource.url=jdbc:oracle:thin:@localhost:1521:ORCL
+#spring.datasource.username=hr
+#spring.datasource.password=hr
+#spring.jpa.hibernate.ddl-auto=create-drop
+
+#spring.mvc.view.prefix=/WEB-INF/jsps/
+#spring.mvc.view.suffix=.jsp

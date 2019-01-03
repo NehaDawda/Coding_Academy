@@ -1,0 +1,5 @@
+package com.jpm.hr.entities;
+
+public class Employee {
+
+}

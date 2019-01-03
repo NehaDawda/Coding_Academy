@@ -1,0 +1,16 @@
+package com.jpm.hr.exceptions;
+
+public class HrException extends Exception{
+
+	private static final long serialVersionUID = -2299835145539138699L;
+
+	public HrException(String arg0) {
+		super(arg0);
+		// TODO Auto-generated constructor stub
+	}
+	
+	public HrException(Throwable arg0) {
+		super(arg0);
+		// TODO Auto-generated constructor stub
+	}
+}

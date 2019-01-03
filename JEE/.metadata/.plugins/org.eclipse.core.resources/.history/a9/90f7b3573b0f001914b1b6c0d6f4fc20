@@ -1,0 +1,25 @@
+package com.jpm.hr.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.jpm.hr.services.HrServices;
+
+@Controller
+public class HrControllerImpl {
+	@Autowired
+	@Qualifier("hrServices")
+	private HrServices services;
+	
+	@RequestMapping("/home")
+	public String getHomePage(){
+		return "Home";
+	}
+	
+	@RequestMapping("/")
+	public String getEmpDetails(int empNo){
+		return "Home";
+	}
+}

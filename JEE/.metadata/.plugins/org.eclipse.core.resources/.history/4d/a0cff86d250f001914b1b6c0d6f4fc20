@@ -1,0 +1,8 @@
+package com.jpm.hr.daos;
+
+import com.jpm.hr.entities.Employee;
+import com.jpm.hr.exceptions.HrException;
+
+public interface HrDaos {
+	public Employee getEmpDetails(int empNo) throws HrException;
+}

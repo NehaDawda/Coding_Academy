@@ -1,0 +1,5 @@
+package com.jpm.hr.exceptions;
+
+public class HrException {
+
+}

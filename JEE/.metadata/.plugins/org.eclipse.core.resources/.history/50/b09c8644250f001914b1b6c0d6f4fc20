@@ -1,0 +1,14 @@
+package com.jpm.hr.daos;
+
+import com.jpm.hr.entities.Employee;
+import com.jpm.hr.exceptions.HrException;
+
+public class HrDaosImpl implements HrDaos {
+
+	@Override
+	public Employee getEmpDetails(int empNo) throws HrException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

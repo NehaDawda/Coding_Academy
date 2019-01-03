@@ -1,0 +1,5 @@
+package com.jpm.hr.controller;
+
+public class HrControllerImpl {
+
+}

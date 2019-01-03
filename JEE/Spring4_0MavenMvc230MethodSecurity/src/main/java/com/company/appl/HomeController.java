@@ -17,7 +17,7 @@ import com.company.daos.EmpDao;
 
 /**
  * Handles requests for the application home page.
- * url: http://localhost:8081/Spring4_0MavenMvc230MethodSecurity/admin
+ * url: http://localhost:8080/Spring4_0MavenMvc230MethodSecurity/admin
  */
 @Controller
 public class HomeController {
